@@ -1,0 +1,10 @@
+//進入目錄位置
+//看程式碼
+vi (filename)
+//離開
+:q
+
+//看程式有沒有跑起來（看port number）
+netstat -na
+//呈上，但有顯示名稱
+netstat -nap
