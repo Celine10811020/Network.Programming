@@ -1,0 +1,15 @@
+Lab_1
+
+[20%] Show your user name and the user’s home directory
+[20%] Rebuild the docker by removing the built one with docker-compose rm followed by docker-compose up -d --build. You don’t have to remove existing docker images and caches so the rebuild process should be very fast.
+[20%] Download the executable file testenv from here and place it into /tmp directory inside your built container.
+[20%] Run /tmp/testenv and show the result.
+[20%] Run the daytimetcpsrv and daytimetcpcli samples in your docker instance.
+
+
+
+Lab_2
+
+[70%] If you can complete the steps manually, you can get 70% of the points. Note that you have to decode the payload of the identified packet to ensure that you have found the right one.
+[15%] If you can identify the magic packet using your implemented script (or program), you can get 85%. Note that you have to (manually) decode the payload of the identified packet to ensure that you have found the right one.
+[15%] If you can decode the content using your implemented script (or program), you can get 100% of the points.

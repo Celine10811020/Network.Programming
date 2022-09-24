@@ -1,0 +1,23 @@
+//安裝traceroute
+apt-cache search traceroute
+sudo apt install inetutils-traceroute
+
+
+//分兩個視窗
+//1. 用tcpdump去聽封包
+sudo tcpdump -ni eth0 udp or icmp
+//exit
+tmux
+//2. 用traceroute決定哪一個IP的路徑
+traceroute 8.8.8.8
+
+//將結果存起來（需要wireshark）
+sudo tcpdump -ni eth0 udp or icmp -s 10000 -w /tmp/test.pcap
+/*
+tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 10000 bytes
+如果沒有多個網卡，直接用any代替eth0
+*/
+
+//開啟結果
+open /tmp/test.pcap
+
