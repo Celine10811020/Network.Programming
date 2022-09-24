@@ -1,0 +1,1 @@
+sudo tcpdump -i any 'ip[8] > 140 and tcp[0:2]=10001' -w ~testtwo.pcap
