@@ -1,0 +1,96 @@
+//進入到 unpv13e/intro
+./byteorder //告訴你電腦是哪一個牌子，並且是用什麼endian的
+
+//進入到另一個環境
+cd ../../unpv13e.big
+cd intro
+ls -la byteorder
+//執行
+./byteorder //顯示其實是可以big endian的（原理：在x86上裝一個mips64的模擬器）
+//看檔案類型
+file byteorder
+/*
+ELF是unix系統的一個執行檔程式
+是mips64的模擬器
+是statically linked靜態連接
+*/
+
+
+//進入另一個資料夾
+cd ../../samples
+//看程式碼，並執行
+cat endian.c
+//用剛剛的模擬器compile另一個新的檔案
+mips64-linux-gnuabi64-gcc endian.c -o endian.mips64 -static
+//執行
+./endian.mips64 //就會顯示是Big，表示是big-endian
+//但如果是在本機端compile
+gcc endian.c -o endian //就會顯示是Little，表示是little-endian
+
+//查看兩個檔案的
+ldd endian
+file endian //會顯示是動態連結
+file endian.mips64 //會顯示是靜態連結
+//查看檔案大小
+ls -la endian endian.mips64
+//告訴你動態連結是要去哪裡找那些library&函數庫
+/*
+靜態連結&動態連結的差別：
+靜態連結是compile完後就把那些library&函數庫跟程式碼綁在一起，
+但動態連結不是，是在執行程式時才去找那些library&函數庫。
+所以想當然耳的，靜態連結的檔案大小會比動態連結的還要大很多。
+*/
+ldd endian
+//但靜態連結卻不需要
+ldd endian.mips64
+
+
+//切換資料夾
+（cd ../unpv13e）
+cd ../unpv13e.big
+cd lib
+//課本範例換compile編譯
+（./configure）
+（mips64-linux-gnuabi64-gcc endian.c -o endian.mips64 -static）
+（cd ..）
+./configure --host=mips64-linux-gnuabi64
+//切換資料夾
+（cd ../intro）
+cd intro
+//看程式碼
+vi Makefile
+//第三行註解掉
+# LIBS += -static
+//儲存離開
+:wq
+//刪檔案
+rm byteorder
+//重新建立
+make byteorder
+//file出來
+file byteorder //仍然是動態連結
+//用模擬器去跑他
+ls -la byteorder
+./byteorder //會發現找不到，少一個檔案，因為電腦裡本身沒有，要裝才可以跑
+//偷懶作法，直接把檔案變成靜態
+!vi
+vi Makefile
+//法一：在byteorder後面直接加上"-static"
+-static
+（:l） 
+//法二：把第三行的註解拿掉
+LIBS += -static
+:wq
+//重新compile
+rm byteorder
+make byteorder //最後面就會顯示是靜態連結了
+//執行
+./byteorder //就會顯示是big-endian了
+
+
+
+
+
+
+
+
