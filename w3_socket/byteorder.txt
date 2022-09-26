@@ -91,8 +91,7 @@ make byteorder //最後面就會顯示是靜態連結了
 
 
 
-//其他方法
-//看big or little endian
+//其他方法看big or little endian
 //法一，CMD內建指令
 lscpu | grep "Byte Order"
 //法二，執行python
