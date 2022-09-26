@@ -1,3 +1,6 @@
 Input-output system calls in C | Create, Open, Close, Read, Write:
   https://www.geeksforgeeks.org/input-output-system-calls-c-create-open-close-read-write/
 
+stdint.h
+  https://zh.m.wikipedia.org/zh-tw/Stdint.h
+  https://wangdoc.com/clang/lib/stdint.h.html
