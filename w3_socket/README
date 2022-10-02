@@ -4,3 +4,8 @@ Input-output system calls in C | Create, Open, Close, Read, Write:
 stdint.h
   https://zh.m.wikipedia.org/zh-tw/Stdint.h
   https://wangdoc.com/clang/lib/stdint.h.html
+
+
+Lab的參考程式碼
+  讀hexdump
+    https://github.com/dangookin/C-For-Dummies-Blog/blob/master/2020_03-Exercise.c
