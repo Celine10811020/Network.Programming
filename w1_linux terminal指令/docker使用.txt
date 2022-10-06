@@ -33,6 +33,9 @@ docker run -itd --name ubuntu-test ubuntu
 ubuntu : Ubuntu 的官方 image 名稱
 */
 
+//複製檔案進docker，在本機端
+docker cp FileName ooxx_main_1:\PATH\FileName
+
 
 //進入Ubuntu
 docker exec -it ubuntu-test /bin/bash
