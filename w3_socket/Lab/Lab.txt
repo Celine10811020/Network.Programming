@@ -1,0 +1,36 @@
+Structure of PAKO file
+	A PAKO file contains four sections: header section, file entries, string section, and content section.
+	header section
+		4 bytes - magic number: P, A, K, O
+		4 bytes - file offset of the string section
+		4 bytes - file offset of the content section
+		4 bytes - number of files packed in this file
+	file entries
+		array of FILE_E (see the descriptions below) contains the information about each file.
+	string section
+		The string section stores filename strings used in this file, each string is ended with a null byte.
+	content section
+		The content section stores the content of all packed files.
+FILE_E data structure
+	4 bytes - offset of the filename string in the string section
+	4 bytes - file size (big-endian)
+	4 bytes - offset of the file content in the content section
+	8 bytes - checksum (big endian)
+		Split the content of a file into segments of 8 bytes. The total number of segments should be ⌈(size-of-PAKO-file)/8⌉.
+		Consider each segment as an uint64_t integer. The checksum is the XOR value of all segments.
+
+
+Use the following command to test your program.
+	wget http://inp111.zoolab.org/lab02.1/testcase0.pak
+	wget http://inp111.zoolab.org/lab02.1/testcase.pak
+	mkdir /tmp/inplab2test
+	./unpacker testcase.pak /tmp/inplab2test
+	cd /tmp/inplab2test
+	chmod +x checker
+	./checker
+
+
+[20%] Your program shows the number of files packed in testcase0.pak.
+[30%] Your program shows the information (filename, file size in bytes) of each file packed in testcase0.pak.
+[20%] The checker program extracted from testcase.pak can run without a crash.
+[30%] The checker program extracted from testcase.pak can run and show the Bingo message successfully.

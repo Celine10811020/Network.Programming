@@ -1,0 +1,64 @@
+//看手冊
+man dup
+man 2 read
+man 7 IP
+man errno
+
+//範例，iptable（in docker）
+sudo su -
+apt install iptables
+//看防火牆裡面有什麼，iptalbe是防火牆的實作
+iptables -nL
+//離開 sudo
+logout
+cd unpv13e/intro
+ls
+tmux
+//1. 
+./daytimetcpsrv
+//2.
+netstat -nap | grep day
+nc localhost 13
+sudo su -
+iptables -nL
+//下防火牆的規則，有封包要輸入時，如果有目標是127.0.0.1，是TCP，port number是13，就讓他reject，然後reject的原因是OOXX
+iptables -I INPUT -d 127.0.0.1 -p tcp --dport 13 -j REJECT --reject-with icmp-host-unreachable
+//成功的話，ip table裡面就會多一條規則
+iptables -nL
+//再去連本機，然後就會發現，連不上
+nc localhost 13
+logout
+./daytimetcpcli1 localhost daytime
+//就會得到一個錯誤訊息：no route to host
+./daytimetcpcli1 127.0.0.1
+//看程式碼，看connect那邊，如果小於0就是error，然後print error
+vi daytimetcpcli1.c
+
+//把防火牆關掉
+sudo su -
+iptables -nL
+//把規則改掉
+iptables -D INPUT 1
+//就不見了！
+iptables -nL
+//然後再跑一次，就可以了！！
+./daytimetcpcli1 127.0.0.1
+
+//改規則，把封包丟掉
+iptables -nL
+iptables -I INPUT -d 127.0.0.1 -p tcp --dport 13 -j DROP
+//一樣可以看到規則設好了
+iptables -nL
+//開錄封包的，可以看到一直重試，然後重試的間隔會越拉越長（秒數以2的次方成長，1、2、4、8、16......）
+-ni lo tcp and port 13
+//跑看看，然後發現跑不了，大概有等個一分多鐘才會發現跑不了（7次）
+./daytimetcpcli1 127.0.0.1
+//如果是reject，可以很快發現，但drop是默默，必須要等電腦放棄不跑了，才能發現
+
+
+
+
+
+
+
+

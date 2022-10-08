@@ -1,0 +1,70 @@
+//in docker
+cd sample
+//寫一個code
+vi fork.c
+
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+int main()
+{
+	int pid, a=1;
+
+	pid = fork();
+
+	printf("%d: %d %d", getpid(), a, pid);
+
+	if(pid == 0) a = 2; //pid==0表示是child，然後就把變數改成2；parent是1
+
+	printf("%d: %d %d", getpid(), a, pid);
+
+	sleep(1000000);
+
+	return 0;
+}
+
+:!man fork
+:w
+:q
+
+//執行它吧！
+gcc fork.c -o fork
+tmux
+./fork
+	418: 1 419 //現在這個程式的編號，return值為419
+	418: 1 419
+	419: 1 0 //child的return值會是0，a是1，因為他是複製人
+	419: 2 0
+
+//改寫程式碼
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+int main()
+{
+	int pid, a=1;
+
+	pid = fork(); //這行之後的，後面所有程式碼都會跑兩次，parent一次，children一次，但順序不知道。但若a是全域變數，兩次執行不互相影響
+	if(pid < 0) {perror("fork"); return -1; }
+
+	printf("%c: %d %d %d", pid == 0 ? 'C': 'P', getpid(), a, pid); //pid等於0嗎？如果是的話就印C，不是就印P
+
+	if(pid == 0) a = 2; //pid==0表示是child，然後就把變數改成2；parent是1
+
+	printf("%c: %d %d %d", pid == 0 ? 'C': 'P', getpid(), a, pid);
+
+	sleep(1000000);
+
+	return 0;
+}
+:wq
+//跑跑看！
+gcc fork.c -o fork
+./fork
+	P: 606 1 607
+	P: 606 1 607
+	C: 607 1 0
+	C: 607 2 0
+//印出來的東西跟ps的其實是不一樣，因為有sleep
+ps auxw | grep fork
+

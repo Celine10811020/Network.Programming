@@ -1,0 +1,153 @@
+//extc.c
+
+#include <stdio.h>
+#include <unistd.h>
+
+int main(int argc, char *argv[])
+{
+	if(argc < 2)
+	{
+		printf("usage: %s cmd [arg ...]\n", argv[0]);
+		return -1;
+	}
+
+	execvp(argv[1], argv+1);
+	perror("execvp");
+
+	printf("hello\n");
+
+	return 0;
+}
+:wq
+
+vi ~/.vimrc
+set number
+
+vi extc.c
+
+//另一個tmux
+man execve
+man execvp
+
+
+//執行，錯誤，因為後面沒給參數
+./exec.c
+//執行，錯誤，因為找不到檔案
+./exec.c aaa
+//執行，成功
+./exec.c ls
+
+
+
+
+
+
+//另外一個程式碼範例
+vi getpid.c
+
+#include <stdio.h>
+#include <unistd.h>
+
+int main()
+{
+	printf("I am %d\n", getpid()); //我是 我的變域值
+	return 0;
+}
+:wq
+
+gcc getpid.c -o getpid
+./getpid
+	I am 1179
+
+
+
+
+//修改
+vi exec.c
+
+#include <stdio.h>
+#include <unistd.h>
+
+int main(int argc, char *argv[])
+{
+	if(argc < 2)
+	{
+		printf("usage: %s cmd [arg ...]\n", argv[0]);
+		return -1;
+	}
+	printf("exec: pid = %d\n", getpid());
+	execvp(argv[1], argv+1); //呼叫一個程式，把後面的全取代掉
+	perror("execvp");
+
+	printf("hello\n");
+
+	return 0;
+}
+
+gcc exec.c -o exec
+//錯誤的，會有印hello
+./exec.c aaa
+//正確的，沒有hello
+./exec.c ls
+//正確的，pid number也會一樣
+./exec.c ./getpid
+	exec: pid = 1265
+	I am 1265
+
+
+
+//再修
+#include <stdio.h>
+#include <unistd.h>
+
+int main(int argc, char *argv[])
+{
+	if(argc < 2)
+	{
+		printf("usage: %s cmd [arg ...]\n", argv[0]);
+		return -1;
+	}
+	printf("exec: pid = %d\n", getpid());
+	fgetc(stdin); //稍稍卡住
+	execvp(argv[1], argv+1); //呼叫一個程式，把後面的全取代掉
+	perror("execvp");
+
+	printf("hello\n");
+
+	return 0;
+}
+	
+#include <stdio.h>
+#include <unistd.h>
+
+int main()
+{
+	printf("I am %d\n", getpid()); //我是 我的變域值
+	sleep(1000000);
+	return 0;
+}
+
+//執行
+gcc exec.c -o exec
+//分兩個
+//1. 
+./exec ./getpid
+//2. 同時有 ./exec ./getpid 兩個程式
+ps auwx | grep 1380
+//但如果程式繼續進行，就只剩下 ./getpid 一個程式
+ps auwx | grep 1380
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
