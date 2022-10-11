@@ -1,0 +1,12 @@
+docker cp w4.c ooxx_main_1:\tmp\w4.c
+
+gcc w4.c -o w4
+
+nc inp111.zoolab.org 10002
+140.113.213.213
+
+
+
+http://www.cs.cmu.edu/afs/cs/academic/class/15213-f00/www/class24code/echoserver.c
+https://github.com/mafintosh/echo-servers.c/blob/master/tcp-echo-server.c
+https://www.gushiciku.cn/pl/pKiZ/zh-tw
