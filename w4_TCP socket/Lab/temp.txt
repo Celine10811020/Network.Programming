@@ -5,6 +5,7 @@ gcc w4.c -o w4
 nc inp111.zoolab.org 10002
 140.113.213.213
 
+netstat -na | grep 10002
 
 
 http://www.cs.cmu.edu/afs/cs/academic/class/15213-f00/www/class24code/echoserver.c
