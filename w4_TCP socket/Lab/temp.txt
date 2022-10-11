@@ -8,6 +8,8 @@ nc inp111.zoolab.org 10002
 netstat -na | grep 10002
 
 
+http://neokentblog.blogspot.com/2012/04/linux-tcp-echo-serverclient-example.html
+
 http://www.cs.cmu.edu/afs/cs/academic/class/15213-f00/www/class24code/echoserver.c
 https://github.com/mafintosh/echo-servers.c/blob/master/tcp-echo-server.c
 https://www.gushiciku.cn/pl/pKiZ/zh-tw
