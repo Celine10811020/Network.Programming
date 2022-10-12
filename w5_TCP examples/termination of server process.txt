@@ -1,0 +1,17 @@
+//在unpv13e/tcpcliserv資料夾裡
+make
+//1.
+tcpserv04 &
+ps auxw | grep tcpserv04
+//2. cli端連線
+./tcpcli01 127.0.0.1
+//2. 下指令會有echo
+hello //回傳hello
+//1. 跟第一次比較，得出哪一個是cli端
+ps auxw | grep tcpserv04
+//1. 砍掉cli端，ex: port 21945
+kill 21945
+//2. 但此時ser端還不知道cli端已斷線，隨便打個輸入後，要去連cli端時，才會發現斷了
+Aadfafdasf
+
+
