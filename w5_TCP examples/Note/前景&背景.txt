@@ -1,0 +1,22 @@
+//在unpv13e/tcpcliser資料夾裡
+make
+//2.
+netstat -na
+//1. 加&符號表是把程式丟背景執行
+./tcpserv01 & //有個回傳值KIP (?)
+//1. 
+ps auxw | grep 1341
+//1. 或按jobs就可以看到有這個程式在跑（如果有裝的話）
+jobs //會回傳序列
+//1. 用netstat看
+netstat -na //看port numbe可以發現程式正在LISTEN中
+//1. 用kill+序列，可以砍掉，結束背景的程式
+kill %1
+//1. 或用kill+KIP
+kill 1617
+
+//按^z，可以把前景的程式丟背景去
+//想要接回來，用fg+序列
+fg %1
+
+

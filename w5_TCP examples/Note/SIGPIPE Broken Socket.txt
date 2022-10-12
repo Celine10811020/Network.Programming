@@ -1,0 +1,26 @@
+//人工建檔
+make tcpcli11
+//看兩個檔案有什麼差別
+diff -u tcpcli11.c tcpcli01.c //11送資料分兩次送
+//2. 
+./tcpcli11 127.0.0.1
+//先送一個字出來，過一秒後，再送其他的
+hello //h ello
+//1. 砍掉cli端
+ps auxw | grep tcpserv 04
+kill 22209
+//2. 用debuger去run
+gdb tcpcli11
+	//執行程式
+	run 
+	//但沒有給參數，所以要給參數才能正常執行
+	run 127.0.0.1
+//1. 一樣砍掉cli端
+ps auxw | grep tcpserv 04
+kill 22302
+//2. 會顯示bug的種類
+world
+
+	//gdb離開
+	quit
+	y
