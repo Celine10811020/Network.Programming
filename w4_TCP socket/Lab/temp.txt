@@ -1,4 +1,5 @@
 docker cp w4.c ooxx_main_1:\tmp\w4.c
+docker cp w4-2.c ooxx_main_1:\tmp\w4-2.c
 
 gcc w4.c -o w4
 ./w4 140.113.213.213 10002
