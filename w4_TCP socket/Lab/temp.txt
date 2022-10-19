@@ -1,18 +1,24 @@
 docker cp w4.c ooxx_main_1:\tmp\w4.c
 docker cp w4-2.c ooxx_main_1:\tmp\w4-2.c
 
+
+[Lab1]
 gcc w4.c -o w4
 ./w4 140.113.213.213 10002
-
-sudo wireshark //ubuntu要從sudo開wireshark
-gcc w4-2.c -o w4-2
-./w4-2 140.113.213.213 10003
-
 
 nc inp111.zoolab.org 10002
 140.113.213.213
 
 netstat -na | grep 10002
+
+
+[Lab2]
+sudo wireshark //ubuntu要從sudo開wireshark
+tcp.dstport == 10003
+
+gcc w4-2.c -o w4-2
+./w4-2 140.113.213.213 10003
+
 
 
 http://neokentblog.blogspot.com/2012/04/linux-tcp-echo-serverclient-example.html
