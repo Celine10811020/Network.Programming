@@ -1,2 +1,7 @@
 gcc w5.c -o w5
-./w5 11111
+./w5 11111 `which date`
+./w5 11111 date
+./w5 11111 /path/to/an/invalid/executable
+./w5 11111 ls -la /tmp /home /xxx
+
+nc localhost 11111
