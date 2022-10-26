@@ -1,2 +1,4 @@
 gcc w6.c -o w6
 ./w6 11111
+
+https://beej-zhtw-gitbook.netdpi.net/jin_jie_ji_shu/selectff1a_tong_bu_i__o_duo_gong
