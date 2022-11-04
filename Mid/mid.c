@@ -174,7 +174,7 @@ int main (int argc, char *argv[])
                 compare = strcmp("USER ", commandFive); //shou dao "USER", chuan song huan ying xuen xi
                 if(compare == 0)
                 {
-                    char welcomeOneOne[] = ":midThree 001 \0";
+                    char welcomeOneOne[] = ":mid 001 \0";
                     char welcomeOneTwo[] = " :Welcome to the mid project chat room\n\0";
                     char combindOne[100] = {};
                     strcat(combindOne, welcomeOneOne);
@@ -182,7 +182,7 @@ int main (int argc, char *argv[])
                     strcat(combindOne, welcomeOneTwo);
                     send(i, combindOne, strlen(combindOne), 0);
                     
-                    char welcomeTwoOne[] = ":midThree 251 \0";
+                    char welcomeTwoOne[] = ":mid 251 \0";
                     char welcomeTwoTwo[] = " :There are \0";
                     char welcomeTwoThree[2] = {};
             	    sprintf(welcomeTwoThree, "%d", clientNum);
@@ -195,15 +195,15 @@ int main (int argc, char *argv[])
                     strcat(combindTwo, welcomeTwoFour);
                     send(i, combindTwo, strlen(combindTwo), 0);
                     
-                    char welcomeThreeOne[] = ":midThree 375 \0";
-                    char welcomeThreeTwo[] = " :- midThree Message of the day -\n\0";
+                    char welcomeThreeOne[] = ":mid 375 \0";
+                    char welcomeThreeTwo[] = " :- mid Message of the day -\n\0";
                     char combindThree[100] = {};
                     strcat(combindThree, welcomeThreeOne);
                     strcat(combindThree, clientName[i]);
                     strcat(combindThree, welcomeThreeTwo);
                     send(i, combindThree, strlen(combindThree), 0);
                     
-                    char welcomeFourOne[] = ":midThree 372 \0";
+                    char welcomeFourOne[] = ":mid 372 \0";
                     char welcomeFourTwo[] = " :-  Hello, World!\n\0";
                     char combindFour[100] = {};
                     strcat(combindFour, welcomeFourOne);
@@ -211,7 +211,7 @@ int main (int argc, char *argv[])
                     strcat(combindFour, welcomeFourTwo);
                     send(i, combindFour, strlen(combindFour), 0);
                     
-                    char welcomeFiveOne[] = ":midThree 376 \0";
+                    char welcomeFiveOne[] = ":mid 376 \0";
                     char welcomeFiveTwo[] = " :End of message of the day\n\0";
                     char combindFive[100] = {};
                     strcat(combindFive, welcomeFiveOne);
@@ -231,7 +231,7 @@ int main (int argc, char *argv[])
                 compare = strcmp("USERS", commandFive); //shou dao "USERS"
                 if(compare == 0)
                 {
-                    char usersOneOne[] = ":midThree 392 \0";
+                    char usersOneOne[] = ":mid 392 \0";
                     char usersOneTwo[] = " :UserID                   Terminal  Host\n\0";
                     char combindOne[100] = {};
                     strcat(combindOne, usersOneOne);
@@ -246,7 +246,7 @@ int main (int argc, char *argv[])
 			    if (j != listener) //bu shi zi ji
 			    {
 			        char combindTwo [100] = {};
-			        char usersTwoOne[] = ":midThree 393 \0";
+			        char usersTwoOne[] = ":mid 393 \0";
 			        char usersTwoTwo[] = " :\0";
 			        strcat(combindTwo, usersTwoOne);
 			        strcat(combindTwo, clientName[i]);
@@ -268,7 +268,7 @@ int main (int argc, char *argv[])
 			}
 		    }
 		    
-		    char usersThreeOne[] = ":midThree 394 \0";
+		    char usersThreeOne[] = ":mid 394 \0";
 		    char usersThreeTwo[] = " :End of users\n\0";
 		    char combindThree[100] = {};
 		    strcat(combindThree, usersThreeOne);
@@ -280,7 +280,7 @@ int main (int argc, char *argv[])
                 compare = strcmp("LIST", commandFour); //shou dao "LIST", lie chu channel lie biao
                 if(compare == 0)
                 {
-                    char listOneOne[] = ":midThree 321 \0";
+                    char listOneOne[] = ":mid 321 \0";
                     char listOneTwo[] = " :Channel  Users  Name\n\0";
                     char combindOne[100] = {};
                     strcat(combindOne, listOneOne);
@@ -291,7 +291,7 @@ int main (int argc, char *argv[])
                     for(k=0; k<channelNum; k++)
                     {
                         char combindTwo[100] = {};
-                        char listTwoOne[] = ":midThree 322 \0";
+                        char listTwoOne[] = ":mid 322 \0";
                         char listTwoTwo[] = " #";
                         char listTwoThree[] = " \0";
                         char listTwoFour[2] = {};
@@ -317,7 +317,7 @@ int main (int argc, char *argv[])
                         send(i, combindTwo, strlen(combindTwo), 0);
                     }
                     
-                    char listThreeOne[] = ":midThree 323 \0";
+                    char listThreeOne[] = ":mid 323 \0";
                     char listThreeTwo[] = " :End of /LIST\n\0";
                     char combindThree[100] = {};
                     strcat(combindThree, listThreeOne);
@@ -446,7 +446,7 @@ int main (int argc, char *argv[])
                         topicName[k][temp] = '\0';
                         
                         char combind[100] = {};
-                        char topicOne[] = ":midThree 332 \0";
+                        char topicOne[] = ":mid 332 \0";
                         char topicTwo[] = " #\0";
                         char topicThree[] = " :\0";
                         char topicFour[] = "\n\0";
@@ -477,7 +477,7 @@ int main (int argc, char *argv[])
                         char combind[100] = {};
                         if(topicName[k][0] == 0)
                         {
-                            char topicOne[] = ":midThree 331 \0";
+                            char topicOne[] = ":mid 331 \0";
                             char topicTwo[] = " #\0";
                             char topicThree[] = " :No topic is set\n\0";
                             
@@ -488,7 +488,7 @@ int main (int argc, char *argv[])
                             strcat(combind, topicThree);
                         }else
                         {
-                            char topicOne[] = ":midThree 332 \0";
+                            char topicOne[] = ":mid 332 \0";
                             char topicTwo[] = " #\0";
                             char topicThree[] = " :\0";
                             char topicFour[] = "\n\0";
