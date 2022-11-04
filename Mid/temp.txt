@@ -8,3 +8,5 @@ weechat
 
 
 
+gcc mid.c -o mid
+./mid 11111
