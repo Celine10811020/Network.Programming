@@ -1,0 +1,10 @@
+weechat
+
+/server (list of server name)
+  midSample (./server 12345)
+  midTwo (./mid 11111)
+
+/connect (server name)
+
+
+
