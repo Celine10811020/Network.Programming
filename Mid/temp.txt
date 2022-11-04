@@ -5,7 +5,11 @@ weechat
   midThree (./mid 11111)
 
 /connect (server name)
-/connect mircd (
+/connect mircd (sample from teacher)
+
+
+weechat -d ./user1 -r '/server add midFour localhost/11111; /set irc.server.midFour.nicks "user1"; /connect midFour'
+weechat -d ./user2 -r '/server add midFour localhost/11111; /set irc.server.midFour.nicks "user2"; /connect midFour'
 
 
 gcc mid.c -o mid
