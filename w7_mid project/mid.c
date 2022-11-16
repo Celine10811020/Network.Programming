@@ -634,18 +634,19 @@ int main (int argc, char *argv[])
                          channel[nbytes-10] = '\0';
                       }
 
-                      //printf("debug, channel (%ld): %s\n", strlen(channel), channel);
+                      printf("debug, channel (%ld): %s\n", strlen(channel), channel);
                       for(k=0; k<channelNum; k++)
                       {
-                          //printf("debug, channelName: %s\n", channelName[k]);
+                          printf("debug, channelName: %s\n", channelName[k]);
                           compare = strcmp(channel, channelName[k]);
                           if(compare == 0)
                           {
+                              printf("debug, break(%d)\n", k);
                               break;
                           }
                       }
-                      //printf("debug, k: %d, channelNum: %d\n", k, channelNum);
-                      if(k > channelNum) //chuang li xin de channel
+                      printf("debug, k: %d, channelNum: %d\n", k, channelNum);
+                      if(k == channelNum) //chuang li xin de channel
                       {
                          char combind[100] = {};
                          char errorOne[] = ":mid 401 \0";
