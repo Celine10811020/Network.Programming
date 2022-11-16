@@ -177,7 +177,7 @@ int main (int argc, char *argv[])
                     {
                         tempName[k] = buf[5+k];
                     }
-                    temp = strlen(tempName)-1;
+                    temp = strlen(tempName)-2;
                     tempName[temp] = '\0';
 
                     for(j=0; j<=fdmax; j++)
@@ -400,7 +400,7 @@ int main (int argc, char *argv[])
                     {
                         channel[k] = buf[6+k];
                     }
-                    temp = strlen(channel) - 1;
+                    temp = strlen(channel) - 2;
                     channel[temp] = '\0';
 
                     char combindOne[100] = {};
@@ -430,6 +430,9 @@ int main (int argc, char *argv[])
                         {
                             channelName[k][m] = channel[m];
                         }
+                        //temp = strlen(channelName[k]) - 1;
+                        //printf("debug: %s(%d)\n", channel, temp);
+                        channelName[k][temp] = '\0';
                         channelNum++;
                     }
                     channelUser[k]++;
@@ -511,15 +514,15 @@ int main (int argc, char *argv[])
                     {
                         if(buf[7+k] == ':')
                         {
-                    	     setTopic = 1;
-                           break;
+                    	    setTopic = 1;
+                            break;
                         }
                         channel[k] = buf[7+k];
                     }
                     if(setTopic == 1)
                     {
                         temp = strlen(channel) - 1;
-                    	  channel[temp] = '\0';
+                    	channel[temp] = '\0';
 
                         temp = 8 + k;
 
@@ -536,7 +539,7 @@ int main (int argc, char *argv[])
                         {
                             topicName[k][m] = buf[temp + m];
                         }
-                        temp = strlen(topicName[k]) - 1;
+                        temp = strlen(topicName[k]) - 2;
                         topicName[k][temp] = '\0';
 
                         char combind[100] = {};
@@ -556,7 +559,7 @@ int main (int argc, char *argv[])
                         send(i, combind, strlen(combind), 0);
                     }else
                     {
-                        temp = strlen(channel) - 1;
+                        temp = strlen(channel) - 2;
                         channel[temp] = '\0';
 
                         for(k=0; k<20; k++) //zhao dao dai ying de channel
@@ -598,7 +601,6 @@ int main (int argc, char *argv[])
 
                         send(i, combind, strlen(combind), 0);
                     }
-                    break;
                 }
 
                 compare = strcmp("PRIVMSG", commandSeven); //shou dao "TOPIC", wei channel she topic
@@ -634,18 +636,18 @@ int main (int argc, char *argv[])
                          channel[nbytes-10] = '\0';
                       }
 
-                      printf("debug, channel (%ld): %s\n", strlen(channel), channel);
+                      //printf("debug, channel (%ld): %s\n", strlen(channel), channel);
                       for(k=0; k<channelNum; k++)
                       {
-                          printf("debug, channelName: %s\n", channelName[k]);
+                          //printf("debug, channelName: %s (%ld)\n", channelName[k], strlen(channelName[k]));
                           compare = strcmp(channel, channelName[k]);
                           if(compare == 0)
                           {
-                              printf("debug, break(%d)\n", k);
+                              //printf("debug, break(%d)\n", k);
                               break;
                           }
                       }
-                      printf("debug, k: %d, channelNum: %d\n", k, channelNum);
+                      //printf("debug, k: %d, channelNum: %d\n", k, channelNum);
                       if(k == channelNum) //chuang li xin de channel
                       {
                          char combind[100] = {};
