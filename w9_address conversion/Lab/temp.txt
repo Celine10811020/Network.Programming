@@ -1,5 +1,5 @@
 gcc w9_server.c -o w9_server
 gcc w9_client.c -o w9_client
 
-w9_server
-w9_client
+./w9_server
+./w9_client
