@@ -1,0 +1,25 @@
+1. Hello, World
+→複製題目的INP{hello, world!}。
+
+2. Play with the Oracles
+→先send message to oracle1，再send message to oracle2，再看oracle1的secrete，直接複製oracle1的secrete給oracle2，即得flag。
+
+3. Play with the Oracles(p1)
+→先send message to oracle1，再send message to oracle2，再看oracle1的secrete的oseed，用該oseed跑rand()得oracle2的secrete，即得flag。
+→code:
+    srand(oseed);
+
+    for(int i=0; i<5; i++)
+    {
+      rand();
+    }
+
+    len  = snprintf(buf,     10, "%x", rand());
+    len += snprintf(buf+len, 10, "%x", rand());
+    len += snprintf(buf+len, 10, "%x", rand());
+    len += snprintf(buf+len, 10, "%x", rand());
+    buf[len] = '\0';
+
+    printf("%s\n", buf);
+
+4. 
