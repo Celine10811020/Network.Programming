@@ -1,0 +1,5 @@
+. ~/pwntools/bin/activate
+
+gcc -static -o sodoku sodoku.c
+./play.py ./sodoku
+
