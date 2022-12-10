@@ -2,6 +2,6 @@ ssh -p 22222 celine@localhost
 
 . ~/pwntools/bin/activate
 
-gcc -static -o sudoku sudoku.c
+gcc -static -o sudoku sudoku.c -lm
 ./play.py ./sudoku
 
