@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)https://md.zoolab.org/s/zniK2CzAA -->
+<html lang="zh-TW" hc="a3" hcx="3"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    
+    
+    <meta name="description" content="# INP111 Lab08 Week #12 (2022-12-01)  Date: 2022-12-01  [TOC]  # Robust UDP Challenge  It is well kn">
+    
+    <title>INP111 Lab08 Week #12 (2022-12-01) - CodiMD</title>
+    <link rel="icon" type="image/png" href="https://md.zoolab.org/favicon.png">
+    <link rel="apple-touch-icon" href="https://md.zoolab.org/apple-touch-icon.png">
+  
+    <link rel="stylesheet" href="./INP111 Lab08 Week #12 (2022-12-01)_files/emojify.min.css">
+    <link rel="stylesheet" href="./INP111 Lab08 Week #12 (2022-12-01)_files/font.css">
+    <link rel="stylesheet" href="./INP111 Lab08 Week #12 (2022-12-01)_files/fork-awesome.min.css">
+    <link href="./INP111 Lab08 Week #12 (2022-12-01)_files/pretty-styles-pack.css" rel="stylesheet"><link href="./INP111 Lab08 Week #12 (2022-12-01)_files/pretty-styles.css" rel="stylesheet"><link href="./INP111 Lab08 Week #12 (2022-12-01)_files/pretty.css" rel="stylesheet">
+  
+<style id="hc_style" type="text/css">html[hc="a0"] {   -webkit-filter: url("https://md.zoolab.org/s/zniK2CzAA#hc_extension_off"); } html[hcx="0"] img[src*="jpg"], html[hcx="0"] img[src*="jpeg"], html[hcx="0"] svg image, html[hcx="0"] img.rg_i, html[hcx="0"] embed, html[hcx="0"] object, html[hcx="0"] video {   -webkit-filter: url("https://md.zoolab.org/s/zniK2CzAA#hc_extension_off"); }  html[hc="a1"] {   -webkit-filter: url("https://md.zoolab.org/s/zniK2CzAA#hc_extension_highcontrast"); } html[hcx="1"] img[src*="jpg"], html[hcx="1"] img[src*="jpeg"], html[hcx="1"] img.rg_i, html[hcx="1"] svg image, html[hcx="1"] embed, html[hcx="1"] object, html[hcx="1"] video {   -webkit-filter: url("https://md.zoolab.org/s/zniK2CzAA#hc_extension_highcontrast_back"); }  html[hc="a2"] {   -webkit-filter: url("https://md.zoolab.org/s/zniK2CzAA#hc_extension_grayscale"); } html[hcx="2"] img[src*="jpg"], html[hcx="2"] img[src*="jpeg"], html[hcx="2"] img.rg_i, html[hcx="2"] svg image, html[hcx="2"] embed, html[hcx="2"] object, html[hcx="2"] video {   -webkit-filter: url("https://md.zoolab.org/s/zniK2CzAA#hc_extension_grayscale_back"); }  html[hc="a3"] {   -webkit-filter: url("https://md.zoolab.org/s/zniK2CzAA#hc_extension_invert"); } html[hcx="3"] img[src*="jpg"], html[hcx="3"] img[src*="jpeg"], html[hcx="3"] img.rg_i, html[hcx="3"] svg image, html[hcx="3"] embed, html[hcx="3"] object, html[hcx="3"] video {   -webkit-filter: url("https://md.zoolab.org/s/zniK2CzAA#hc_extension_invert_back"); }  html[hc="a4"] {   -webkit-filter: url("https://md.zoolab.org/s/zniK2CzAA#hc_extension_invert_grayscale"); } html[hcx="4"] img[src*="jpg"], html[hcx="4"] img[src*="jpeg"], html[hcx="4"] img.rg_i, html[hcx="4"] svg image, html[hcx="4"] embed, html[hcx="4"] object, html[hcx="4"] video {   -webkit-filter: url("https://md.zoolab.org/s/zniK2CzAA#hc_extension_invert_back"); }  html[hc="a5"] {   -webkit-filter: url("https://md.zoolab.org/s/zniK2CzAA#hc_extension_yellow_on_black"); } html[hcx="5"] img[src*="jpg"], html[hcx="5"] img[src*="jpeg"], html[hcx="5"] img.rg_i, html[hcx="5"] svg image, html[hcx="5"] embed, html[hcx="5"] object, html[hcx="5"] video {   -webkit-filter: url("https://md.zoolab.org/s/zniK2CzAA#hc_extension_yellow_on_black_back"); }</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css" id="parrottalks-notetaker-style">      html > body.evernote_clearly__before_visible #parrottalks-notetaker > iframe,      html > body.clearlyBeforeVisible #parrottalks-notetaker > iframe:not(#evernoteGlobalTools):not(#evernoteOptionsPage):not(#evernoteClearlyArticle) {        visibility: visible !important;      }      .evernote_clearly__before_visible #evernote_clearly__reformat,      .clearlyBeforeVisible #evernoteClearlyArticle {        z-index: 2147483646 !important;      }    </style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body style="" data-new-gr-c-s-check-loaded="14.1088.0" data-gr-ext-installed=""><div id="MathJax_Message" style="display: none;"></div>
+    <div id="hc_extension_bkgnd" style="position: fixed; inset: 0px; z-index: -1999999999; display: block; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);"></div><span id="hc_extension_svg_filters" hidden=""><svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs><filter x="0" y="0" width="99999" height="99999" id="hc_extension_off"><fecomponenttransfer><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb></fecomponenttransfer></filter><filter x="0" y="0" width="99999" height="99999" id="hc_extension_highcontrast"><fecomponenttransfer><fefuncr type="gamma" exponent="3.0"></fefuncr><fefuncg type="gamma" exponent="3.0"></fefuncg><fefuncb type="gamma" exponent="3.0"></fefuncb></fecomponenttransfer></filter><filter x="0" y="0" width="99999" height="99999" id="hc_extension_highcontrast_back"><fecomponenttransfer><fefuncr type="gamma" exponent="0.33"></fefuncr><fefuncg type="gamma" exponent="0.33"></fefuncg><fefuncb type="gamma" exponent="0.33"></fefuncb></fecomponenttransfer></filter><filter x="0" y="0" width="99999" height="99999" id="hc_extension_grayscale"><fecolormatrix type="matrix" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0"></fecolormatrix><fecomponenttransfer><fefuncr type="gamma" exponent="3"></fefuncr><fefuncg type="gamma" exponent="3"></fefuncg><fefuncb type="gamma" exponent="3"></fefuncb></fecomponenttransfer></filter><filter x="0" y="0" width="99999" height="99999" id="hc_extension_grayscale_back"><fecomponenttransfer><fefuncr type="gamma" exponent="0.33"></fefuncr><fefuncg type="gamma" exponent="0.33"></fefuncg><fefuncb type="gamma" exponent="0.33"></fefuncb></fecomponenttransfer></filter><filter x="0" y="0" width="99999" height="99999" id="hc_extension_invert"><fecomponenttransfer><fefuncr type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncr><fefuncg type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncg><fefuncb type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncb></fecomponenttransfer></filter><filter x="0" y="0" width="99999" height="99999" id="hc_extension_invert_back"><fecomponenttransfer><fefuncr type="table" tableValues="1 0"></fefuncr><fefuncg type="table" tableValues="1 0"></fefuncg><fefuncb type="table" tableValues="1 0"></fefuncb></fecomponenttransfer><fecomponenttransfer><fefuncr type="gamma" exponent="1.7"></fefuncr><fefuncg type="gamma" exponent="1.7"></fefuncg><fefuncb type="gamma" exponent="1.7"></fefuncb></fecomponenttransfer></filter><filter x="0" y="0" width="99999" height="99999" id="hc_extension_invert_grayscale"><fecolormatrix type="matrix" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0"></fecolormatrix><fecomponenttransfer><fefuncr type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncr><fefuncg type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncg><fefuncb type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncb></fecomponenttransfer></filter><filter x="0" y="0" width="99999" height="99999" id="hc_extension_yellow_on_black"><fecomponenttransfer><fefuncr type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncr><fefuncg type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncg><fefuncb type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncb></fecomponenttransfer><fecolormatrix type="matrix" values="0.3 0.5 0.2 0 0 0.3 0.5 0.2 0 0 0 0 0 0 0 0 0 0 1 0"></fecolormatrix></filter><filter x="0" y="0" width="99999" height="99999" id="hc_extension_yellow_on_black_back"><fecomponenttransfer><fefuncr type="table" tableValues="1 0"></fefuncr><fefuncg type="table" tableValues="1 0"></fefuncg><fefuncb type="table" tableValues="1 0"></fefuncb></fecomponenttransfer><fecomponenttransfer><fefuncr type="gamma" exponent="0.33"></fefuncr><fefuncg type="gamma" exponent="0.33"></fefuncg><fefuncb type="gamma" exponent="0.33"></fefuncb></fecomponenttransfer></filter></defs></svg></span><div class="ui-infobar container-fluid unselectable hidden-print">
+        <small>
+            <span>
+                
+                    <span class="ui-lastchangeuser"> <i class="ui-user-icon small" style="background-image: url(https://www.gravatar.com/avatar/90018aa080b07e502a72e649bd43fdaa?s=96);" data-toggle="tooltip" data-placement="right" title="" data-original-title="inp111"></i></span>
+                
+                &nbsp;<span class="text-uppercase ui-status-lastchange">changed</span>
+                <span class="ui-lastchange text-uppercase" data-createtime="Mon Oct 24 2022 03:08:40 GMT+0000 (Coordinated Universal Time)" data-updatetime="Tue Nov 29 2022 13:42:23 GMT+0000 (Coordinated Universal Time)" title="Tue, Nov 29, 2022 9:42 PM">11 days ago</span>
+            </span>
+            <span class="pull-right">637 views <a href="https://md.zoolab.org/s/zniK2CzAA/edit" class="ui-edit" title="Edit this note"><i class="fa fa-fw fa-pencil"></i></a></span>
+            <br>
+            
+        </small>
+    </div>
+    <div id="doc" class="container markdown-body"><h1 class="" id="INP111-Lab08-Week-12-2022-12-01"><a class="anchor hidden-xs" href="https://md.zoolab.org/s/zniK2CzAA#INP111-Lab08-Week-12-2022-12-01" title="INP111-Lab08-Week-12-2022-12-01" smoothhashscroll=""><i class="fa fa-link"></i></a>INP111 Lab08 Week #12 (2022-12-01)</h1>
+<p>Date: 2022-12-01</p>
+<p></p><div class="toc"><ul>
+<li><a href="https://md.zoolab.org/s/zniK2CzAA#INP111-Lab08-Week-12-2022-12-01" title="INP111 Lab08 Week #12 (2022-12-01)" smoothhashscroll="">INP111 Lab08 Week #12 (2022-12-01)</a></li>
+<li><a href="https://md.zoolab.org/s/zniK2CzAA#Robust-UDP-Challenge" title="Robust UDP Challenge" smoothhashscroll="">Robust UDP Challenge</a><ul>
+<li><a href="https://md.zoolab.org/s/zniK2CzAA#The-Challenge-Server" title="The Challenge Server" smoothhashscroll="">The Challenge Server</a></li>
+<li><a href="https://md.zoolab.org/s/zniK2CzAA#Sample-Files" title="Sample Files" smoothhashscroll="">Sample Files</a></li>
+<li><a href="https://md.zoolab.org/s/zniK2CzAA#Demonstration" title="Demonstration" smoothhashscroll="">Demonstration</a></li>
+</ul>
+</li>
+</ul>
+</div><p></p>
+<h1 class="" id="Robust-UDP-Challenge"><a class="anchor hidden-xs" href="https://md.zoolab.org/s/zniK2CzAA#Robust-UDP-Challenge" title="Robust-UDP-Challenge" smoothhashscroll=""><i class="fa fa-link"></i></a>Robust UDP Challenge</h1>
+<p>It is well known that UDP is an unreliable transport layer protocol. This lab aims to practice implementing a robust file transmission protocol using UDP. The objective is to send 1000 files from a client to a server over a lossy link. You (and your team members) have to implement both the server and the client. We do not have a spec for the protocol. You can decide how to transmit the files by yourself. The only limitation is that you must transmit the files over UDP. Once you have completed your implementations, you can upload your compiled server and client to our challenge server for evaluation. Good luck, and have fun!</p>
+<h2 class="" id="The-Challenge-Server"><a class="anchor hidden-xs" href="https://md.zoolab.org/s/zniK2CzAA#The-Challenge-Server" title="The-Challenge-Server" smoothhashscroll=""><i class="fa fa-link"></i></a>The Challenge Server</h2>
+<p>The challenge server can be accessed via <code>nc</code> using the command:</p>
+<pre><code>nc inp111.zoolab.org 10009
+</code></pre>
+<p>You have to solve the Proof-of-Work challenge first. The server then allows you to upload two binary files encoded in base64. The first one is for the server, and the second one is for the client. You <em><strong>must</strong></em> compile your programs on a Linux machine (both x86_64 and arm64 dockers are fine) and link the program with <code>-static</code> option. This is because your binary will be invoked on the challenge server, but no standard dynamic libraries are available on the challenge server.</p>
+<p>We recommend you interact with our challenge server using <code>pwntools</code>. If you do not have it, install it by following the instructions <a href="https://md.zoolab.org/s/EleTCdAQ5" target="_blank" rel="noopener">here</a>.</p>
+<p>Once your installation is successful, you can submit your binaries using our prepared script <code>submit.py</code> (<a href="https://inp111.zoolab.org/code.html?file=lab08/submit.py" target="_blank" rel="noopener">view</a> | <a href="https://inp111.zoolab.org/lab08/submit.py" target="_blank" rel="noopener">download</a>). The usage of this script is as follows:</p>
+<pre><code>python3 submit.py /path/to/your/server /path/to/your/client [team-token]
+</code></pre>
+<p>The script solves the PoW challenge from the challenge server, uploads the two binaries to the server, runs the server and the client on the challenge server, and reports results from the server. An optional third parameter, <code>[team-token]</code>, is used to submit your score to the scoreboard.</p>
+<p>Note that the challenge server runs your program by passing several arguments to your programs. For the server, it is</p>
+<pre><code>/server &lt;path-to-store-files&gt; &lt;total-number-of-files&gt; &lt;port&gt;
+^^^^^^^
+Your program
+</code></pre>
+<p>For the client, it is</p>
+<pre><code>/client &lt;path-to-read-files&gt; &lt;total-number-of-files&gt; &lt;port&gt; &lt;server-ip-address&gt;
+^^^^^^^
+Your program
+</code></pre>
+<p>Suppose the files are stored in the <code>/files</code> directory (only on the client side), and there is a total of <em>N</em> files. Each filename is a six-digit numeric starting from zero to <em>N-1</em>. The default setting of the challenge server generates 1000 files (named from <code>000000</code> to <code>000999</code>) of different sizes randomly.</p>
+<p>Your client program should read files from the <code>&lt;path-to-read-files&gt;</code> and send the files to your server using UDP. Your server program should store received files in the <code>&lt;path-to-store-files&gt;</code> directory.</p>
+<p>The challenge server checks the transmitted files right after your client program terminates. It then reports how many files have been correctly transmitted over the lossy link. The current settings for the lossy link emulated by <code>netem</code> is <code>limit 1000 delay 100ms  50ms loss 40% corrupt 10% rate 10Mbit</code>.</p>
+<h2 class="" id="Sample-Files"><a class="anchor hidden-xs" href="https://md.zoolab.org/s/zniK2CzAA#Sample-Files" title="Sample-Files" smoothhashscroll=""><i class="fa fa-link"></i></a>Sample Files</h2>
+<p>To better illustrate how the challenge server works, we implement a <strong>UDP echo server</strong> and a <strong>UDP ping client</strong> to demonstrate how to transmit the binary executables to the challenge server and test the programs. The source codes for the two programs are available here:</p>
+<div class="alert alert-warning">
+<p>You can upload any executables you like to the server and see how it behaves. Here we simply use our implemented sample files for an illustration.</p>
+</div>
+<ul>
+<li class="">
+<p><strong>UDP echo server</strong>: <a href="https://inp111.zoolab.org/code.html?file=lab08/udpechosrv.c" target="_blank" rel="noopener">view</a> | <a href="https://inp111.zoolab.org/lab08/udpechosrv.c" target="_blank" rel="noopener">download</a><br>
+On receipt of a UDP packet, the UDP echo server sends it back to its sender.</p>
+</li>
+<li class="">
+<p><strong>UDP ping client</strong>: <a href="https://inp111.zoolab.org/code.html?file=lab08/udpping.c" target="_blank" rel="noopener">view</a> | <a href="https://inp111.zoolab.org/lab08/udpping.c" target="_blank" rel="noopener">download</a><br>
+The UDP ping client sends a packet to a target UDP server. A sequence number and a timestamp are embedded into a packet. The echo-backed packet from the echo server can then be used to measure the round-trip time.</p>
+</li>
+</ul>
+<p>You can compile and generate the executables using the following commands:</p>
+<pre><code>gcc -static -o udpechosrv udpechosrv.c
+gcc -static -o udpping udpping.c
+</code></pre>
+<p>You can then submit the two binary executables to the challenge server using the <code>submit.py</code> script: (Suppose all the files are placed in the same directory)</p>
+<pre><code>python3 submit.py ./udpechosrv ./udpping
+</code></pre>
+<p>If everything is correct. You should see messages like those in the below screenshot. Here are some interesting observations.</p>
+<ul>
+<li class="">
+<p>The screenshot shows that the <code>submit.py</code> script spent about 3s to solve the PoW.</p>
+</li>
+<li class="">
+<p>It then uploads the two files to the challenge server. The local md5 values are computed by <code>submit.py</code>, and the remote md5 values are returned from the challenge server.</p>
+</li>
+<li class="">
+<p>The challenge server shows its network settings and starts running the server and the client.</p>
+</li>
+<li class="">
+<p>The screenshot also shows that the measured round-trip time is higher than 200ms, and most packets are lost (only two are received).</p>
+</li>
+<li class="">
+<p>After the client is terminated, the challenge server checks the files on the server side. Since we did not perform any file transmission, all the checks failed, and the final success rate was zero.</p>
+</li>
+</ul>
+<p><img src="./INP111 Lab08 Week #12 (2022-12-01)_files/submit-udpecho-ping.png" alt="submit-udpecho-ping" class="md-image"></p>
+<h2 class="" id="Demonstration"><a class="anchor hidden-xs" href="https://md.zoolab.org/s/zniK2CzAA#Demonstration" title="Demonstration" smoothhashscroll=""><i class="fa fa-link"></i></a>Demonstration</h2>
+<p>We simply record the performance of your implementation. The final score is (tentatively) evaluated based on the success rate and the rank on the scoreboard. The minimum requirement to get 60 pts is to correctly transmit at least 1% of the files (that is, success rate &gt; 0.01). Note that the challenge server <em>kills</em> your server and client programs after running it for about 300s. It means you have to finish file transmission before your programs are killed.</p>
+<p>Please note that <em><strong>you must</strong></em> demonstrate your implementation to a TA for recording your score. If you would like to know how other teams perform, a <a href="https://robustudp.zoolab.org/" target="_blank" rel="noopener">scoreboard</a> is also available to see the success rate of all participating teams.</p>
+</div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display: none; right: 243.32px;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="https://md.zoolab.org/s/zniK2CzAA#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel"><div class="toc"><ul class="nav">
+<li><a href="https://md.zoolab.org/s/zniK2CzAA#INP111-Lab08-Week-12-2022-12-01" title="INP111 Lab08 Week #12 (2022-12-01)" smoothhashscroll="">INP111 Lab08 Week #12 (2022-12-01)</a></li>
+<li><a href="https://md.zoolab.org/s/zniK2CzAA#Robust-UDP-Challenge" title="Robust UDP Challenge" smoothhashscroll="">Robust UDP Challenge</a><ul class="nav">
+<li><a href="https://md.zoolab.org/s/zniK2CzAA#The-Challenge-Server" title="The Challenge Server" smoothhashscroll="">The Challenge Server</a></li>
+<li><a href="https://md.zoolab.org/s/zniK2CzAA#Sample-Files" title="Sample Files" smoothhashscroll="">Sample Files</a></li>
+<li><a href="https://md.zoolab.org/s/zniK2CzAA#Demonstration" title="Demonstration" smoothhashscroll="">Demonstration</a></li>
+</ul>
+</li>
+</ul>
+</div></ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print affix" data-spy="affix" style="left: 976.68px;"><div class="toc"><ul class="nav">
+<li><a href="https://md.zoolab.org/s/zniK2CzAA#INP111-Lab08-Week-12-2022-12-01" title="INP111 Lab08 Week #12 (2022-12-01)" smoothhashscroll="">INP111 Lab08 Week #12 (2022-12-01)</a></li>
+<li><a href="https://md.zoolab.org/s/zniK2CzAA#Robust-UDP-Challenge" title="Robust UDP Challenge" smoothhashscroll="">Robust UDP Challenge</a><ul class="nav">
+<li><a href="https://md.zoolab.org/s/zniK2CzAA#The-Challenge-Server" title="The Challenge Server" smoothhashscroll="">The Challenge Server</a></li>
+<li><a href="https://md.zoolab.org/s/zniK2CzAA#Sample-Files" title="Sample Files" smoothhashscroll="">Sample Files</a></li>
+<li><a href="https://md.zoolab.org/s/zniK2CzAA#Demonstration" title="Demonstration" smoothhashscroll="">Demonstration</a></li>
+</ul>
+</li>
+</ul>
+</div></div>
+    
+
+
+
+<script src="./INP111 Lab08 Week #12 (2022-12-01)_files/mathjax-config-extra.js.下載"></script>
+
+<script src="./INP111 Lab08 Week #12 (2022-12-01)_files/MathJax.js.下載" defer=""></script>
+<script src="./INP111 Lab08 Week #12 (2022-12-01)_files/TeX-AMS-MML_HTMLorMML.js.下載" defer=""></script>
+<script src="./INP111 Lab08 Week #12 (2022-12-01)_files/Safe.js.下載" defer=""></script>
+<script src="./INP111 Lab08 Week #12 (2022-12-01)_files/config"></script><script src="./INP111 Lab08 Week #12 (2022-12-01)_files/common.1349a0316c4d8448fc8a.js.下載" defer="defer"></script><script src="./INP111 Lab08 Week #12 (2022-12-01)_files/pretty-pack.7d6d83ca1bdc20fcbeac.js.下載" defer="defer"></script>
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

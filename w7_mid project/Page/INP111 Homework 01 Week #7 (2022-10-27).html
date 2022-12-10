@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q -->
+<html lang="zh-TW" hc="a3" hcx="3"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="mobile-web-app-capable" content="yes">
+<title>INP111 Homework 01 Week #7 (2022-10-27) - CodiMD</title>
+<link rel="icon" type="image/png" href="https://md.zoolab.org/favicon.png">
+<link rel="apple-touch-icon" href="https://md.zoolab.org/apple-touch-icon.png">
+
+<link rel="stylesheet" href="./INP111 Homework 01 Week #7 (2022-10-27)_files/emojify.min.css">
+<link rel="stylesheet" href="./INP111 Homework 01 Week #7 (2022-10-27)_files/font.css">
+<link rel="stylesheet" href="./INP111 Homework 01 Week #7 (2022-10-27)_files/fork-awesome.min.css">
+<link href="./INP111 Homework 01 Week #7 (2022-10-27)_files/index-styles-pack.css" rel="stylesheet"><link href="./INP111 Homework 01 Week #7 (2022-10-27)_files/index-styles.css" rel="stylesheet"><link href="./INP111 Homework 01 Week #7 (2022-10-27)_files/index.css" rel="stylesheet">
+
+<link rel="stylesheet" href="./INP111 Homework 01 Week #7 (2022-10-27)_files/lint.css">
+
+<style id="hc_style" type="text/css">html[hc="a0"] {   -webkit-filter: url("https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#hc_extension_off"); } html[hcx="0"] img[src*="jpg"], html[hcx="0"] img[src*="jpeg"], html[hcx="0"] svg image, html[hcx="0"] img.rg_i, html[hcx="0"] embed, html[hcx="0"] object, html[hcx="0"] video {   -webkit-filter: url("https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#hc_extension_off"); }  html[hc="a1"] {   -webkit-filter: url("https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#hc_extension_highcontrast"); } html[hcx="1"] img[src*="jpg"], html[hcx="1"] img[src*="jpeg"], html[hcx="1"] img.rg_i, html[hcx="1"] svg image, html[hcx="1"] embed, html[hcx="1"] object, html[hcx="1"] video {   -webkit-filter: url("https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#hc_extension_highcontrast_back"); }  html[hc="a2"] {   -webkit-filter: url("https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#hc_extension_grayscale"); } html[hcx="2"] img[src*="jpg"], html[hcx="2"] img[src*="jpeg"], html[hcx="2"] img.rg_i, html[hcx="2"] svg image, html[hcx="2"] embed, html[hcx="2"] object, html[hcx="2"] video {   -webkit-filter: url("https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#hc_extension_grayscale_back"); }  html[hc="a3"] {   -webkit-filter: url("https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#hc_extension_invert"); } html[hcx="3"] img[src*="jpg"], html[hcx="3"] img[src*="jpeg"], html[hcx="3"] img.rg_i, html[hcx="3"] svg image, html[hcx="3"] embed, html[hcx="3"] object, html[hcx="3"] video {   -webkit-filter: url("https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#hc_extension_invert_back"); }  html[hc="a4"] {   -webkit-filter: url("https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#hc_extension_invert_grayscale"); } html[hcx="4"] img[src*="jpg"], html[hcx="4"] img[src*="jpeg"], html[hcx="4"] img.rg_i, html[hcx="4"] svg image, html[hcx="4"] embed, html[hcx="4"] object, html[hcx="4"] video {   -webkit-filter: url("https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#hc_extension_invert_back"); }  html[hc="a5"] {   -webkit-filter: url("https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#hc_extension_yellow_on_black"); } html[hcx="5"] img[src*="jpg"], html[hcx="5"] img[src*="jpeg"], html[hcx="5"] img.rg_i, html[hcx="5"] svg image, html[hcx="5"] embed, html[hcx="5"] object, html[hcx="5"] video {   -webkit-filter: url("https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#hc_extension_yellow_on_black_back"); }</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style></style><style></style><style type="text/css" id="parrottalks-notetaker-style">      html > body.evernote_clearly__before_visible #parrottalks-notetaker > iframe,      html > body.clearlyBeforeVisible #parrottalks-notetaker > iframe:not(#evernoteGlobalTools):not(#evernoteOptionsPage):not(#evernoteClearlyArticle) {        visibility: visible !important;      }      .evernote_clearly__before_visible #evernote_clearly__reformat,      .clearlyBeforeVisible #evernoteClearlyArticle {        z-index: 2147483646 !important;      }    </style></head>
+
+<body data-new-gr-c-s-check-loaded="14.1088.0" data-gr-ext-installed="" style="background-color: white; padding-top: 51px;"><div id="MathJax_Message" style="display: none;"></div>
+    <div id="hc_extension_bkgnd" style="position: fixed; inset: 0px; z-index: -1999999999; display: block; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);"></div><span id="hc_extension_svg_filters" hidden=""><svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs><filter x="0" y="0" width="99999" height="99999" id="hc_extension_off"><fecomponenttransfer><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb></fecomponenttransfer></filter><filter x="0" y="0" width="99999" height="99999" id="hc_extension_highcontrast"><fecomponenttransfer><fefuncr type="gamma" exponent="3.0"></fefuncr><fefuncg type="gamma" exponent="3.0"></fefuncg><fefuncb type="gamma" exponent="3.0"></fefuncb></fecomponenttransfer></filter><filter x="0" y="0" width="99999" height="99999" id="hc_extension_highcontrast_back"><fecomponenttransfer><fefuncr type="gamma" exponent="0.33"></fefuncr><fefuncg type="gamma" exponent="0.33"></fefuncg><fefuncb type="gamma" exponent="0.33"></fefuncb></fecomponenttransfer></filter><filter x="0" y="0" width="99999" height="99999" id="hc_extension_grayscale"><fecolormatrix type="matrix" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0"></fecolormatrix><fecomponenttransfer><fefuncr type="gamma" exponent="3"></fefuncr><fefuncg type="gamma" exponent="3"></fefuncg><fefuncb type="gamma" exponent="3"></fefuncb></fecomponenttransfer></filter><filter x="0" y="0" width="99999" height="99999" id="hc_extension_grayscale_back"><fecomponenttransfer><fefuncr type="gamma" exponent="0.33"></fefuncr><fefuncg type="gamma" exponent="0.33"></fefuncg><fefuncb type="gamma" exponent="0.33"></fefuncb></fecomponenttransfer></filter><filter x="0" y="0" width="99999" height="99999" id="hc_extension_invert"><fecomponenttransfer><fefuncr type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncr><fefuncg type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncg><fefuncb type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncb></fecomponenttransfer></filter><filter x="0" y="0" width="99999" height="99999" id="hc_extension_invert_back"><fecomponenttransfer><fefuncr type="table" tableValues="1 0"></fefuncr><fefuncg type="table" tableValues="1 0"></fefuncg><fefuncb type="table" tableValues="1 0"></fefuncb></fecomponenttransfer><fecomponenttransfer><fefuncr type="gamma" exponent="1.7"></fefuncr><fefuncg type="gamma" exponent="1.7"></fefuncg><fefuncb type="gamma" exponent="1.7"></fefuncb></fecomponenttransfer></filter><filter x="0" y="0" width="99999" height="99999" id="hc_extension_invert_grayscale"><fecolormatrix type="matrix" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0"></fecolormatrix><fecomponenttransfer><fefuncr type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncr><fefuncg type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncg><fefuncb type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncb></fecomponenttransfer></filter><filter x="0" y="0" width="99999" height="99999" id="hc_extension_yellow_on_black"><fecomponenttransfer><fefuncr type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncr><fefuncg type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncg><fefuncb type="gamma" amplitude="-1" exponent="3" offset="1"></fefuncb></fecomponenttransfer><fecolormatrix type="matrix" values="0.3 0.5 0.2 0 0 0.3 0.5 0.2 0 0 0 0 0 0 0 0 0 0 1 0"></fecolormatrix></filter><filter x="0" y="0" width="99999" height="99999" id="hc_extension_yellow_on_black_back"><fecomponenttransfer><fefuncr type="table" tableValues="1 0"></fefuncr><fefuncg type="table" tableValues="1 0"></fefuncg><fefuncb type="table" tableValues="1 0"></fefuncb></fecomponenttransfer><fecomponenttransfer><fefuncr type="gamma" exponent="0.33"></fefuncr><fefuncg type="gamma" exponent="0.33"></fefuncg><fefuncb type="gamma" exponent="0.33"></fefuncb></fecomponenttransfer></filter></defs></svg></span><nav class="navbar navbar-default navbar-fixed-top unselectable hidden-print">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <div class="pull-right" style="margin-top: 17px; color: #777;">
+            <div class="visible-xs">&nbsp;</div>
+            <div class="visible-sm">&nbsp;</div>
+            <div class="visible-md">&nbsp;</div>
+            <div class="visible-lg">&nbsp;</div>
+        </div>
+        <div class="nav-mobile nav-status visible-xs" id="short-online-user-list">
+            <a class="ui-short-status" data-toggle="dropdown">
+                <span class="label label-warning ui-status-connected" style="display: none;"><i class="fa fa-wifi"></i></span>
+                <span class="label label-primary ui-status-online" style=""><i class="fa fa-users"></i> <span class="ui-status-short-msg">1</span></span>
+                <span class="label label-danger ui-status-offline" style="display: none;"><i class="fa fa-plug"></i></span>
+            </a>
+            <ul class="dropdown-menu list" role="menu" aria-labelledby="menu"><li class="ui-user-item"><span class="id" style="display:none;">P7pWExIELUEnJjyrABCr</span><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#"><span class="pull-left"><i class="ui-user-icon" style="background-color: rgb(255, 199, 0);"></i></span><span class="ui-user-name name">Guest Pig</span><span class="pull-right"><i class="fa fa-circle ui-user-status ui-user-status-online"></i></span></a></li></ul>
+        </div>
+        <a class="navbar-brand pull-left" href="https://md.zoolab.org/"><i class="fa fa-file-text"></i> CodiMD</a>
+        <div class="nav-mobile pull-right visible-xs">
+            <span class="btn btn-link btn-file ui-upload-image" title="Upload Image" style="display:none;">
+                <i class="fa fa-camera"></i><input type="file" accept="image/*" name="upload" multiple="">
+            </span>
+            <a data-toggle="dropdown" class="btn btn-link">
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu list" role="menu" aria-labelledby="menu">
+                <li role="presentation"><a role="menuitem" class="ui-new" tabindex="-1" href="https://md.zoolab.org/new" target="_blank" rel="noopener"><i class="fa fa-plus fa-fw"></i> 新增</a>
+                </li>
+                <li role="presentation"><a role="menuitem" class="ui-publish" tabindex="-1" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q/publish" target="_blank" rel="noopener"><i class="fa fa-share-square-o fa-fw"></i> 發佈</a>
+                </li>
+                <li class="divider"></li>
+                <li class="dropdown-header">增益</li>
+                <li role="presentation"><a role="menuitem" class="ui-extra-revision" tabindex="-1" data-toggle="modal" data-target="#revisionModal"><i class="fa fa-history fa-fw"></i> 修訂版本</a>
+                </li>
+                <li role="presentation"><a role="menuitem" class="ui-extra-slide" tabindex="-1" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q/slide" target="_blank" rel="noopener"><i class="fa fa-tv fa-fw"></i> 簡報模式</a>
+                </li>
+                
+                <li class="divider"></li>
+                <li class="dropdown-header">匯入</li>
+                <li role="presentation"><a role="menuitem" class="ui-import-dropbox" tabindex="-1" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" target="_self" style="display: none;"><i class="fa fa-dropbox fa-fw"></i> Dropbox</a>
+                </li>
+                <li role="presentation"><a role="menuitem" class="ui-import-gist" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" data-toggle="modal" data-target="#gistImportModal"><i class="fa fa-github fa-fw"></i> Gist</a>
+                </li>
+                
+                <li role="presentation"><a role="menuitem" class="ui-import-clipboard" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" data-toggle="modal" data-target="#clipboardModal"><i class="fa fa-clipboard fa-fw"></i> 剪貼簿</a>
+                </li>
+                <li class="divider"></li>
+                <li class="dropdown-header">下載</li>
+                <li role="presentation"><a role="menuitem" class="ui-download-markdown" tabindex="-1" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" target="_self"><i class="fa fa-file-text fa-fw"></i> Markdown</a>
+                </li>
+                <li role="presentation"><a role="menuitem" class="ui-download-html" tabindex="-1" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" target="_self"><i class="fa fa-file-code-o fa-fw"></i> HTML</a>
+                </li>
+                <li role="presentation"><a role="menuitem" class="ui-download-raw-html" tabindex="-1" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" target="_self"><i class="fa fa-file-code-o fa-fw"></i> 純 HTML</a>
+                </li>
+                
+                  <li role="presentation"><a role="menuitem" class="ui-download-pdf-beta" tabindex="-1" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q/pdf" target="_self" download=""><i class="fa fa-file-pdf-o fa-fw"></i> PDF (Beta)</a>
+                  </li>
+                
+                <li role="presentation"><a role="menuitem" class="ui-download-pandoc" tabindex="-1" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" target="_self" data-toggle="modal" data-target=".pandoc-export-modal"><i class="fa fa-cloud-download fa-fw"></i> Pandoc (Beta)</a>
+                </li>
+                <li class="divider"></li>
+                <li role="presentation"><a role="menuitem" class="ui-help" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" data-toggle="modal" data-target=".help-modal"><i class="fa fa-question-circle fa-fw"></i> Help</a>
+                </li>
+            </ul>
+            <a class="btn btn-link ui-mode">
+                <i class="fa fa-pencil"></i>
+            </a>
+        </div>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-form navbar-left" style="padding:0;">
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-default ui-edit" title="編輯 (Ctrl+Alt+E)">
+                    <input type="radio" name="mode" autocomplete="off"><i class="fa fa-pencil"></i>
+                </label>
+                <label class="btn btn-default ui-both" title="雙欄 (Ctrl+Alt+B)">
+                    <input type="radio" name="mode" autocomplete="off"><i class="fa fa-columns"></i>
+                </label>
+                <label class="btn btn-default ui-view active" title="檢視 (Ctrl+Alt+V)">
+                    <input type="radio" name="mode" autocomplete="off"><i class="fa fa-eye"></i>
+                </label>
+            </div>
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn ui-night" title="夜間主題">
+                    <input type="checkbox" name="night"><i class="fa fa-moon-o"></i>
+                </label>
+            </div>
+            <span class="btn btn-link btn-file ui-help" title="協助" data-toggle="modal" data-target=".help-modal">
+                <i class="fa fa-question-circle"></i>
+            </span>
+            <span class="btn btn-link btn-file ui-upload-image" title="上傳圖片" style="display:none;">
+                <i class="fa fa-camera"></i><input type="file" accept="image/*" name="upload" multiple="">
+            </span>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li id="online-user-list">
+                <a class="ui-status" data-toggle="dropdown">
+                    <span class="label label-warning ui-status-connected" style="display: none;"><i class="fa fa-wifi"></i> CONNECTED</span>
+                    <span class="label label-primary ui-status-online" style=""><i class="fa fa-users"></i> <span class="ui-status-short-msg">1</span> ONLINE</span>
+                    <span class="label label-danger ui-status-offline" style="display: none;"><i class="fa fa-plug"></i> OFFLINE</span>
+                </a>
+                <ul class="dropdown-menu list" role="menu" aria-labelledby="menu" style="right: 15px;width: 200px;"><li class="ui-user-item"><span class="id" style="display:none;">P7pWExIELUEnJjyrABCr</span><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#"><span class="pull-left"><i class="ui-user-icon" style="background-color: rgb(255, 199, 0);"></i></span><span class="ui-user-name name">Guest Pig</span><span class="pull-right"><i class="fa fa-circle ui-user-status ui-user-status-online"></i></span></a></li></ul>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" style="padding:0;">
+            <li>
+                <a href="https://md.zoolab.org/new" target="_blank" rel="noopener" class="ui-new">
+                    <i class="fa fa-plus"></i> 新增
+                </a>
+            </li>
+            <li>
+                <a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q/publish" target="_blank" rel="noopener" class="ui-publish">
+                    <i class="fa fa-share-square-o"></i> 發佈
+                </a>
+            </li>
+            <li>
+                <a data-toggle="dropdown">
+                    選單 <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu list" role="menu" aria-labelledby="menu">
+                    <li class="dropdown-header">增益</li>
+                    <li role="presentation"><a role="menuitem" class="ui-extra-revision" tabindex="-1" data-toggle="modal" data-target="#revisionModal"><i class="fa fa-history fa-fw"></i> 修訂版本</a>
+                    </li>
+                    <li role="presentation"><a role="menuitem" class="ui-extra-slide" tabindex="-1" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q/slide" target="_blank" rel="noopener"><i class="fa fa-tv fa-fw"></i> 簡報模式</a>
+                    </li>
+                    
+                    <li class="divider"></li>
+                    <li class="dropdown-header">匯入</li>
+                    <li role="presentation"><a role="menuitem" class="ui-import-dropbox" tabindex="-1" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" target="_self" style="display: none;"><i class="fa fa-dropbox fa-fw"></i> Dropbox</a>
+                    </li>
+                    <li role="presentation"><a role="menuitem" class="ui-import-gist" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" data-toggle="modal" data-target="#gistImportModal"><i class="fa fa-github fa-fw"></i> Gist</a>
+                    </li>
+                    
+                    <li role="presentation"><a role="menuitem" class="ui-import-clipboard" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" data-toggle="modal" data-target="#clipboardModal"><i class="fa fa-clipboard fa-fw"></i> 剪貼簿</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">下載</li>
+                    <li role="presentation"><a role="menuitem" class="ui-download-markdown" tabindex="-1" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" target="_self"><i class="fa fa-file-text fa-fw"></i> Markdown</a>
+                    </li>
+                    <li role="presentation"><a role="menuitem" class="ui-download-html" tabindex="-1" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" target="_self"><i class="fa fa-file-code-o fa-fw"></i> HTML</a>
+                    </li>
+                    <li role="presentation"><a role="menuitem" class="ui-download-raw-html" tabindex="-1" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" target="_self"><i class="fa fa-file-code-o fa-fw"></i> 純 HTML</a>
+                    </li>
+                    
+                      <li role="presentation"><a role="menuitem" class="ui-download-pdf-beta" tabindex="-1" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q/pdf" target="_self" download=""><i class="fa fa-file-pdf-o fa-fw"></i> PDF (Beta)</a>
+                      </li>
+                    
+                    <li role="presentation"><a role="menuitem" class="ui-download-pandoc" tabindex="-1" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" target="_self" data-toggle="modal" data-target=".pandoc-export-modal"><i class="fa fa-cloud-download fa-fw"></i> Pandoc (Beta)</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="ui-spinner unselectable hidden-print" style="display: none;"><div class="spinner" role="progressbar" style="position: absolute; width: 0px; z-index: 2000000000; left: 50%; top: 50%; transform: scale(1);"><div style="position: absolute; top: -1px; width: 22px; height: 2px; background: transparent; border-radius: 0px; transform-origin: left center; transform: rotate(0deg) translateX(30px);"><div style="width: 100%; height: 100%; background: rgb(0, 0, 0); border-radius: 0px; animation: 0.909091s linear -0.909091s infinite normal none running spinner-line-fade-default;"></div></div><div style="position: absolute; top: -1px; width: 22px; height: 2px; background: transparent; border-radius: 0px; transform-origin: left center; transform: rotate(32deg) translateX(30px);"><div style="width: 100%; height: 100%; background: rgb(0, 0, 0); border-radius: 0px; animation: 0.909091s linear -0.826446s infinite normal none running spinner-line-fade-default;"></div></div><div style="position: absolute; top: -1px; width: 22px; height: 2px; background: transparent; border-radius: 0px; transform-origin: left center; transform: rotate(65deg) translateX(30px);"><div style="width: 100%; height: 100%; background: rgb(0, 0, 0); border-radius: 0px; animation: 0.909091s linear -0.743802s infinite normal none running spinner-line-fade-default;"></div></div><div style="position: absolute; top: -1px; width: 22px; height: 2px; background: transparent; border-radius: 0px; transform-origin: left center; transform: rotate(98deg) translateX(30px);"><div style="width: 100%; height: 100%; background: rgb(0, 0, 0); border-radius: 0px; animation: 0.909091s linear -0.661157s infinite normal none running spinner-line-fade-default;"></div></div><div style="position: absolute; top: -1px; width: 22px; height: 2px; background: transparent; border-radius: 0px; transform-origin: left center; transform: rotate(130deg) translateX(30px);"><div style="width: 100%; height: 100%; background: rgb(0, 0, 0); border-radius: 0px; animation: 0.909091s linear -0.578512s infinite normal none running spinner-line-fade-default;"></div></div><div style="position: absolute; top: -1px; width: 22px; height: 2px; background: transparent; border-radius: 0px; transform-origin: left center; transform: rotate(163deg) translateX(30px);"><div style="width: 100%; height: 100%; background: rgb(0, 0, 0); border-radius: 0px; animation: 0.909091s linear -0.495868s infinite normal none running spinner-line-fade-default;"></div></div><div style="position: absolute; top: -1px; width: 22px; height: 2px; background: transparent; border-radius: 0px; transform-origin: left center; transform: rotate(196deg) translateX(30px);"><div style="width: 100%; height: 100%; background: rgb(0, 0, 0); border-radius: 0px; animation: 0.909091s linear -0.413223s infinite normal none running spinner-line-fade-default;"></div></div><div style="position: absolute; top: -1px; width: 22px; height: 2px; background: transparent; border-radius: 0px; transform-origin: left center; transform: rotate(229deg) translateX(30px);"><div style="width: 100%; height: 100%; background: rgb(0, 0, 0); border-radius: 0px; animation: 0.909091s linear -0.330579s infinite normal none running spinner-line-fade-default;"></div></div><div style="position: absolute; top: -1px; width: 22px; height: 2px; background: transparent; border-radius: 0px; transform-origin: left center; transform: rotate(261deg) translateX(30px);"><div style="width: 100%; height: 100%; background: rgb(0, 0, 0); border-radius: 0px; animation: 0.909091s linear -0.247934s infinite normal none running spinner-line-fade-default;"></div></div><div style="position: absolute; top: -1px; width: 22px; height: 2px; background: transparent; border-radius: 0px; transform-origin: left center; transform: rotate(294deg) translateX(30px);"><div style="width: 100%; height: 100%; background: rgb(0, 0, 0); border-radius: 0px; animation: 0.909091s linear -0.165289s infinite normal none running spinner-line-fade-default;"></div></div><div style="position: absolute; top: -1px; width: 22px; height: 2px; background: transparent; border-radius: 0px; transform-origin: left center; transform: rotate(327deg) translateX(30px);"><div style="width: 100%; height: 100%; background: rgb(0, 0, 0); border-radius: 0px; animation: 0.909091s linear -0.0826446s infinite normal none running spinner-line-fade-default;"></div></div></div></div>
+
+    <div class="row ui-content" style="">
+    <div class="ui-edit-area unselectable ui-resizable" style="display: none;">
+        <textarea id="textit" style="display: none;"></textarea><div class="CodeMirror cm-s-one-dark CodeMirror-wrap CodeMirror-overlayscroll" translate="no" style="height: 563.2px;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 66px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-overlayscroll-horizontal" cm-not-content="true" style="display: none;"><div></div></div><div class="CodeMirror-overlayscroll-vertical" cm-not-content="true" style="display: block; bottom: 0px;"><div style="height: 10px; top: -0.0179211px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" style="height: 563.2px;"><div class="CodeMirror-sizer" style="margin-left: 0px; padding-right: 10px; padding-bottom: 0px; margin-bottom: -13px; border-right-width: 37px; min-height: 2575px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation" style="padding-bottom: 541px;"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-m-markdown cm-header cm-header-1"># INP111 Homework 01 Week </span><span class="cm-m-markdown cm-header cm-header-1 cm-link">#7</span><span class="cm-m-markdown cm-header cm-header-1"> (2022-10-27)</span></span></pre></div><div class="CodeMirror-other-cursors"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 22.5px;">&nbsp;</div></div><div class="cursor-menu"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -62px; width: 62px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-m-markdown cm-header cm-header-1"># INP111 Homework 01 Week </span><span class="cm-m-markdown cm-header cm-header-1 cm-link">#7</span><span class="cm-m-markdown cm-header cm-header-1"> (2022-10-27)</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-m-markdown">Date: 2022-10-27</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-m-markdown cm-tag cm-bracket">&lt;</span><span class="cm-m-xml cm-tag">span</span><span class="cm-m-xml"> </span><span class="cm-m-xml cm-attribute">style</span><span class="cm-m-xml">=</span><span class="cm-m-xml cm-string">"color:red"</span><span class="cm-m-xml cm-tag cm-bracket">&gt;</span><span class="cm-m-xml">Due Date: 2022-11-17</span><span class="cm-m-xml cm-tag cm-bracket">&lt;/</span><span class="cm-m-xml cm-tag">span</span><span class="cm-m-xml cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-m-markdown cm-link">[TOC]</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-m-markdown cm-header cm-header-1"># Minimized IRC Server (Daemon)</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-m-markdown">This homework is the extension of our previous lab, the chat server. Instead of working with a proprietary protocol, we aim to implement a server compliant with real-world clients running the IRC protocol. The IRC protocol is standardized in </span><span class="cm-m-markdown cm-link">[RFC 1459]</span><span class="cm-m-markdown cm-string cm-url">(https://www.rfc-editor.org/rfc/rfc1459.html)</span><span class="cm-m-markdown">. Although it has been updated several times, we choose to follow the simplest (oldest) version to implement this homework.</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-m-markdown">:::danger</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-m-markdown">A complete IRC server can interconnect with other servers. To minimize the cost of implementing this homework, you do not need to handle interconnections with other servers. </span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-m-markdown">:::</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-m-markdown">The specification of this homework is much more complicated than our previous lab. Please read it carefully and ensure that your implementation works appropriately with our selected console-based IRC client, </span><span class="cm-m-markdown cm-link">[weechat]</span><span class="cm-m-markdown cm-string cm-url">(https://weechat.org/)</span><span class="cm-m-markdown">. The weechat client can be installed in Debian/Ubuntu Linux using the command </span><span class="cm-m-markdown cm-comment">``sudo apt install weechat``</span><span class="cm-m-markdown"> and in Mac OS using the command </span><span class="cm-m-markdown cm-comment">``brew install weechat``</span><span class="cm-m-markdown"> (You have to install </span><span class="cm-m-markdown cm-link">[</span><span class="cm-m-markdown cm-link cm-comment">``homebrew``</span><span class="cm-m-markdown cm-link">]</span><span class="cm-m-markdown cm-string cm-url">(https://brew.sh/)</span><span class="cm-m-markdown"> package manager first).</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-m-markdown cm-header cm-header-2">## Brief Descriptions of the Specification</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-m-markdown">You have to read </span><span class="cm-m-markdown cm-link">[RFC 1459]</span><span class="cm-m-markdown cm-string cm-url">(https://www.rfc-editor.org/rfc/rfc1459.html)</span><span class="cm-m-markdown"> for the details of commands and response/error messages. Here we simply provide brief descriptions of the required commands and response/error messages you must implement in this homework.</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -62px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 37px; width: 1px; border-bottom: 0px solid transparent; top: 2575px;"></div><div class="CodeMirror-gutters" style="left: 0px; height: 2612px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 40px;"></div><div class="CodeMirror-gutter authorship-gutters"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div>
+    <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90; display: none;"><button class="btn btn-lg btn-default ui-sync-toggle" title="Toggle sync scrolling" style="display: none;"><i class="fa fa-link fa-fw"></i></button></div></div>
+    <div class="ui-view-area">
+        <div class="ui-infobar container-fluid unselectable hidden-print">
+            <small>
+                <span>
+                    <span class="ui-lastchangeuser" style=""> <i class="ui-user-icon small" data-toggle="tooltip" data-placement="right" data-original-title="inp111" title="" style="background-image:url(https://www.gravatar.com/avatar/90018aa080b07e502a72e649bd43fdaa?s=96)"></i></span>
+                    <span class="ui-no-lastchangeuser" style="display: none;"> <i class="fa fa-clock-o fa-fw" style="width: 18px;"></i></span>
+                    &nbsp;<span class="text-uppercase ui-status-lastchange">changed</span>
+                    <span class="ui-lastchange text-uppercase" title="Mon, Nov 28, 2022 3:16 PM">12 days ago</span>
+                </span>
+                <span class="ui-permission dropdown pull-right">
+                    <a id="permissionLabelFreely" class="ui-permission-label text-uppercase disabled" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: none;" title="Anyone can edit"><i class="fa fa-leaf"></i> Freely <i class="ui-permission-caret-down fa fa-caret-down" style="display: none;"></i></a>
+                    <a id="permissionLabelEditable" class="ui-permission-label text-uppercase disabled" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="" title="Signed-in people can edit"><i class="fa fa-shield fa-fw"></i> Editable <i class="ui-permission-caret-down fa fa-caret-down" style="display: none;"></i></a>
+                    <a id="permissionLabelLimited" class="ui-permission-label text-uppercase disabled" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: none;" title="Signed-in people can edit (forbid guests)"><i class="fa fa-id-card fa-fw"></i> Limited <i class="ui-permission-caret-down fa fa-caret-down" style="display: none;"></i></a>
+                    <a id="permissionLabelLocked" class="ui-permission-label text-uppercase disabled" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: none;" title="Only owner can edit"><i class="fa fa-lock fa-fw"></i> Locked <i class="ui-permission-caret-down fa fa-caret-down" style="display: none;"></i></a>
+                    <a id="permissionLabelProtected" class="ui-permission-label text-uppercase disabled" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: none;" title="Only owner can edit (forbid guests)"><i class="fa fa-umbrella fa-fw"></i> Protected <i class="ui-permission-caret-down fa fa-caret-down" style="display: none;"></i></a>
+                    <a id="permissionLabelPrivate" class="ui-permission-label text-uppercase disabled" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: none;" title="Only owner can view &amp; edit"><i class="fa fa-hand-stop-o fa-fw"></i> Private <i class="ui-permission-caret-down fa fa-caret-down" style="display: none;"></i></a>
+                    <ul class="dropdown-menu" aria-labelledby="permissionLabelFreely permissionLabelEditable permissionLabelLimited permissionLabelLocked permissionLabelProtected permissionLabelPrivate">
+                        <li class="ui-permission-freely"><a><i class="fa fa-leaf fa-fw"></i> Freely - Anyone can edit</a></li>
+                        <li class="ui-permission-editable"><a><i class="fa fa-shield fa-fw"></i> Editable - Signed-in people can edit</a></li>
+                        <li class="ui-permission-limited"><a><i class="fa fa-id-card fa-fw"></i> Limited - Signed-in people can edit (forbid guests)</a></li>
+                        <li class="ui-permission-locked"><a><i class="fa fa-lock fa-fw"></i> Locked - Only owner can edit</a></li>
+                        <li class="ui-permission-protected"><a><i class="fa fa-umbrella fa-fw"></i> Protected - Only owner can edit (forbid guests)</a></li>
+                        <li class="ui-permission-private"><a><i class="fa fa-hand-stop-o fa-fw"></i> Private - Only owner can view &amp; edit</a></li>
+                        <li class="divider"></li>
+                        <li class="ui-delete-note"><a><i class="fa fa-trash-o fa-fw"></i> Delete this note</a></li>
+                    </ul>
+                </span>
+                <br>
+                <span class="ui-owner" style="display: none;">
+                     <i class="ui-user-icon small" data-toggle="tooltip" data-placement="right" data-original-title="inp111" title="" style="background-image:url(https://www.gravatar.com/avatar/90018aa080b07e502a72e649bd43fdaa?s=96)"></i>
+                    &nbsp;<span class="text-uppercase">owned this note</span>
+                </span>
+            </small>
+        </div>
+        <div id="doc" class="markdown-body container-fluid"><h1 class="part" data-startline="1" data-endline="1" id="INP111-Homework-01-Week-7-2022-10-27"><a class="anchor hidden-xs" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#INP111-Homework-01-Week-7-2022-10-27" title="INP111-Homework-01-Week-7-2022-10-27" smoothhashscroll=""><i class="fa fa-link"></i></a>INP111 Homework 01 Week #7 (2022-10-27)</h1><p class="part" data-startline="3" data-endline="4">Date: 2022-10-27<br>
+<span style="color:red">Due Date: 2022-11-17</span></p><p class="part" data-startline="6" data-endline="6"></p><div class="toc"><ul>
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#INP111-Homework-01-Week-7-2022-10-27" title="INP111 Homework 01 Week #7 (2022-10-27)" smoothhashscroll="">INP111 Homework 01 Week #7 (2022-10-27)</a></li>
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Minimized-IRC-Server-Daemon" title="Minimized IRC Server (Daemon)" smoothhashscroll="">Minimized IRC Server (Daemon)</a><ul>
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Brief-Descriptions-of-the-Specification" title="Brief Descriptions of the Specification" smoothhashscroll="">Brief Descriptions of the Specification</a><ul>
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Commands-received-from-a-Client" title="Commands (received from a Client)" smoothhashscroll="">Commands (received from a Client)</a></li>
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Server-Messages-sent-from-the-Server" title="Server Messages (sent from the Server)" smoothhashscroll="">Server Messages (sent from the Server)</a></li>
+</ul>
+</li>
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#The-IRC-Client" title="The IRC Client" smoothhashscroll="">The IRC Client</a></li>
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Demonstration" title="Demonstration" smoothhashscroll="">Demonstration</a></li>
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Error-test_case" title="Error test_case" smoothhashscroll="">Error test_case</a></li>
+</ul>
+</li>
+</ul>
+</div><p></p><h1 class="part" data-startline="8" data-endline="8" id="Minimized-IRC-Server-Daemon"><a class="anchor hidden-xs" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Minimized-IRC-Server-Daemon" title="Minimized-IRC-Server-Daemon" smoothhashscroll=""><i class="fa fa-link"></i></a>Minimized IRC Server (Daemon)</h1><p class="part" data-startline="10" data-endline="10">This homework is the extension of our previous lab, the chat server. Instead of working with a proprietary protocol, we aim to implement a server compliant with real-world clients running the IRC protocol. The IRC protocol is standardized in <a href="https://www.rfc-editor.org/rfc/rfc1459.html" target="_blank" rel="noopener">RFC 1459</a>. Although it has been updated several times, we choose to follow the simplest (oldest) version to implement this homework.</p><div class="alert alert-danger part" data-startline="12" data-endline="13">
+<p>A complete IRC server can interconnect with other servers. To minimize the cost of implementing this homework, you do not need to handle interconnections with other servers.</p>
+</div><p class="part" data-startline="16" data-endline="16">The specification of this homework is much more complicated than our previous lab. Please read it carefully and ensure that your implementation works appropriately with our selected console-based IRC client, <a href="https://weechat.org/" target="_blank" rel="noopener">weechat</a>. The weechat client can be installed in Debian/Ubuntu Linux using the command <code>sudo apt install weechat</code> and in Mac OS using the command <code>brew install weechat</code> (You have to install <a href="https://brew.sh/" target="_blank" rel="noopener"><code>homebrew</code></a> package manager first).</p><h2 class="part" data-startline="18" data-endline="18" id="Brief-Descriptions-of-the-Specification"><a class="anchor hidden-xs" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Brief-Descriptions-of-the-Specification" title="Brief-Descriptions-of-the-Specification" smoothhashscroll=""><i class="fa fa-link"></i></a>Brief Descriptions of the Specification</h2><p class="part" data-startline="20" data-endline="20">You have to read <a href="https://www.rfc-editor.org/rfc/rfc1459.html" target="_blank" rel="noopener">RFC 1459</a> for the details of commands and response/error messages. Here we simply provide brief descriptions of the required commands and response/error messages you must implement in this homework.</p><h3 class="part" data-startline="22" data-endline="22" id="Commands-received-from-a-Client"><a class="anchor hidden-xs" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Commands-received-from-a-Client" title="Commands-received-from-a-Client" smoothhashscroll=""><i class="fa fa-link"></i></a>Commands (received from a Client)</h3><p class="part" data-startline="24" data-endline="24">The required commands are listed below. Note that command arguments enclosed by brackets are optional.</p><pre class="part" data-startline="26" data-endline="38"><code>NICK &lt;nickname&gt;
+USER &lt;username&gt; &lt;hostname&gt; &lt;servername&gt; &lt;realname&gt;
+PING &lt;server1&gt; [&lt;server2&gt;]
+LIST [&lt;channel&gt;]
+JOIN &lt;channel&gt;
+TOPIC &lt;channel&gt; [&lt;topic&gt;]
+NAMES [&lt;channel&gt;]
+PART &lt;channel&gt;
+USERS
+PRIVMSG &lt;channel&gt; &lt;message&gt;
+QUIT
+</code></pre><p class="part" data-startline="40" data-endline="40">You can find the details of each command in Section 4 of <a href="https://www.rfc-editor.org/rfc/rfc1459.html" target="_blank" rel="noopener">RFC 1459</a>.</p><div class="alert alert-danger part" data-startline="41" data-endline="44">
+<p>PING conmmand changed from PING &lt;message&gt; to PING &lt;server1&gt; [&lt;server2&gt;]</p>
+<p>To simplify the implementation, you can always repond PONG to the PING message <strong>without</strong> checking the availability of the target server. Respond <strong>ERR_NOORIGIN</strong> if no server is given.</p>
+</div><div class="alert alert-success part" data-startline="46" data-endline="61">
+<p>Additional remarks for the commands listed above are summarized as follows. These remarks might make your implementation simpler.</p>
+<ul>
+<li class="" data-startline="49" data-endline="50">
+<p>A <code>&lt;nickname&gt;</code> cannot contain spaces.</p>
+</li>
+<li class="" data-startline="51" data-endline="52">
+<p>A <code>&lt;channel&gt;</code> must be prefixed with a pond (#) symbol, e.g., <code>#channel</code>.</p>
+</li>
+<li class="" data-startline="53" data-endline="54">
+<p>The last parameter must be prefixed with a colon (’:’).</p>
+</li>
+<li class="" data-startline="55" data-endline="56">
+<p>By default, there is no response from <code>NICK</code> and <code>USER</code> commands unless there are errors. But the server must send the message of the day (motd) to a client once both commands are accepted.</p>
+</li>
+<li class="" data-startline="57" data-endline="58">
+<p><code>JOIN</code> a channel is always a success. If the channel does not exist, your server should automatically create the channel.</p>
+</li>
+<li class="" data-startline="59" data-endline="60">
+<p>For successful <code>JOIN</code> and <code>PART</code> commands, the server must respond <code>:&lt;nickname&gt; &lt;the command &amp; params received from the client&gt;</code> first, followed by the rest of the responses.</p>
+</li>
+<li class="" data-startline="61" data-endline="61">
+<p><code>PRIVMSG</code> can be only used to send messages into a channel in our implementation. You do not have to implement sending a message to a user privately.</p>
+</li>
+</ul>
+</div><h3 class="part" data-startline="64" data-endline="64" id="Server-Messages-sent-from-the-Server"><a class="anchor hidden-xs" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Server-Messages-sent-from-the-Server" title="Server-Messages-sent-from-the-Server" smoothhashscroll=""><i class="fa fa-link"></i></a>Server Messages (sent from the Server)</h3><p class="part" data-startline="66" data-endline="66">The general form of a server responded message is:</p><pre class="part" data-startline="68" data-endline="70"><code>:&lt;prefix&gt; NNN [&lt;nickname&gt;] [&lt;params&gt; ... ]
+</code></pre><p class="part" data-startline="72" data-endline="72">The required response and error messages are listed below. You can find the details of each response/error message in Section 6 of <a href="https://www.rfc-editor.org/rfc/rfc1459.html" target="_blank" rel="noopener">RFC 1459</a>.</p><pre class="part" data-startline="74" data-endline="102"><code>(321) RPL_LISTSTART
+(322) RPL_LIST
+(323) RPL_LISTEND
+(331) RPL_NOTOPIC
+(332) RPL_TOPIC
+(353) RPL_NAMREPLY
+(366) RPL_ENDOFNAMES
+(372) RPL_MOTD
+(375) RPL_MOTDSTART
+(376) RPL_ENDOFMOTD
+(392) RPL_USERSSTART
+(393) RPL_USERS
+(394) RPL_ENDOFUSERS
+
+(401) ERR_NOSUCHNICK
+(403) ERR_NOSUCHCHANNEL
+(411) ERR_NORECIPIENT
+(412) ERR_NOTEXTTOSEND
+(421) ERR_UNKNOWNCOMMAND
+(431) ERR_NONICKNAMEGIVEN
+(436) ERR_NICKCOLLISION
+(442) ERR_NOTONCHANNEL
+(461) ERR_NEEDMOREPARAMS
+
+Removed Error Codes
+-----------------------
+(451) ERR_NOTREGISTERED
+</code></pre><div class="alert alert-success part" data-startline="104" data-endline="117">
+<p>Additional remarks for the general form of the server responded messages are summarized as follows. These remarks might make your implementation simpler.</p>
+<ul>
+<li class="" data-startline="107" data-endline="108">
+<p>The prefix can be a fixed string, e.g., <code>mircd</code> or your preferred server name.</p>
+</li>
+<li class="" data-startline="109" data-endline="110">
+<p><code>NNN</code> is the response/error code composed of three digits.</p>
+</li>
+<li class="" data-startline="111" data-endline="112">
+<p><code>&lt;nickname&gt;</code> is required when it is known for an associated connection.</p>
+</li>
+<li class="" data-startline="113" data-endline="114">
+<p>The number of <code>&lt;params&gt;</code> depends on the corresponding response/error code.</p>
+</li>
+<li class="" data-startline="115" data-endline="116">
+<p>The last parameter must be prefixed with a colon (’:’).</p>
+</li>
+<li class="" data-startline="117" data-endline="117">
+<p>To deliver a <code>PRIVMSG</code> message received from <code>&lt;userX&gt;</code>, the received message from <code>&lt;userX&gt;</code> is prepended with the prefix <code>:&lt;userX&gt;</code> and then delivered to all users in the channel. The resulted message should look like <code>:&lt;userX&gt; PRIVMSG #&lt;channel&gt; :&lt;message&gt;</code>.</p>
+</li>
+</ul>
+</div><h2 class="part" data-startline="120" data-endline="120" id="The-IRC-Client"><a class="anchor hidden-xs" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#The-IRC-Client" title="The-IRC-Client" smoothhashscroll=""><i class="fa fa-link"></i></a>The IRC Client</h2><p class="part" data-startline="122" data-endline="122">We use the console-based IRC client, <a href="https://weechat.org/" target="_blank" rel="noopener">weechat</a>, to test your implementation. You may use it to play with our sample implementation running at <code>inp111.zoolab.org</code> port <code>10004</code>. The relevant weechat commands are summarized as follows.</p><div class="alert alert-danger part" data-startline="124" data-endline="125">
+<p>Note that weechat, by default, stores user configurations and data in <code>~/.config/weechat</code> and <code>~/.local/share/weechat</code> and disallows multiple instances to run simultaneously. To run multiple weechat instances on the same machine, you must use the <code>-d</code> option to specify a dedicated directory for each running instance.</p>
+</div><ul class="part" data-startline="128" data-endline="154">
+<li class="" data-startline="128" data-endline="129">
+<p>List available servers: <code>/server</code></p>
+</li>
+<li class="" data-startline="130" data-endline="132">
+<p>Add a server: <code>/server add &lt;servername&gt; &lt;hostname&gt;/&lt;port&gt;</code><br>
+For example, <code>/server add mircd inp111.zoolab.org/10004</code> adds a server named <code>mircd</code> running at <code>inp111.zoolab.org</code> port <code>10004</code>.</p>
+</li>
+<li class="" data-startline="133" data-endline="135">
+<p>Set user nickname for a server: <code>/set irc.server.&lt;servername&gt;.nicks "&lt;nickname&gt;"</code><br>
+For example, <code>/set irc.server.mircd.nicks "user1"</code>.</p>
+</li>
+<li class="" data-startline="136" data-endline="138">
+<p>Connect to a server: <code>/connect &lt;servername&gt;</code><br>
+Connect to an added server named <code>&lt;servername&gt;</code>. For example, <code>/connect mircd</code>.</p>
+</li>
+<li class="" data-startline="139" data-endline="140">
+<p>List users on the server: <code>/users</code></p>
+</li>
+<li class="" data-startline="141" data-endline="142">
+<p>List channels on the server: <code>/list</code></p>
+</li>
+<li class="" data-startline="143" data-endline="144">
+<p>Join a channel: <code>/join &lt;#channel&gt;</code></p>
+</li>
+<li class="" data-startline="145" data-endline="146">
+<p>Leave a channel: <code>/part</code></p>
+</li>
+<li class="" data-startline="147" data-endline="148">
+<p>Close a buffer and leave a channel (or a server): <code>/close</code></p>
+</li>
+<li class="" data-startline="149" data-endline="150">
+<p>Set channel topic: <code>/topic &lt;topic&gt;</code>. You can only do this when you are in a channel.</p>
+</li>
+<li class="" data-startline="151" data-endline="152">
+<p>Terminate weechat: <code>/quit</code></p>
+</li>
+<li class="" data-startline="153" data-endline="154">
+<p>Send messages in a channel: Simply type the message you want to send, and all the users in the channel should receive the message.</p>
+</li>
+</ul><h2 class="part" data-startline="155" data-endline="155" id="Demonstration"><a class="anchor hidden-xs" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Demonstration" title="Demonstration" smoothhashscroll=""><i class="fa fa-link"></i></a>Demonstration</h2><ol class="part" data-startline="157" data-endline="158">
+<li class="" data-startline="157" data-endline="158">[15 pts] Connect to the server and receive the message of the day (motd).</li>
+</ol><div class="alert alert-success part" data-startline="159" data-endline="169">
+<p>You may use the following commands to emulate two IRC users connecting to the same server. Suppose the server runs at <code>localhost</code> port <code>10004</code>. The command for <em>User1</em> and <em>User2</em> should be run in two terminals, respectively.</p>
+<ul>
+<li class="" data-startline="161" data-endline="161">User1</li>
+</ul>
+<pre><code>weechat -d ./user1 -r '/server add mircd localhost/10004; /set irc.server.mircd.nicks "user1"; /connect mircd'
+</code></pre>
+<ul>
+<li class="" data-startline="165" data-endline="165">User2</li>
+</ul>
+<pre><code>weechat -d ./user2 -r '/server add mircd localhost/10004; /set irc.server.mircd.nicks "user2"; /connect mircd'
+</code></pre>
+<p>If you want to clear the settings for the users, remove the directories <code>user1</code> and <code>user2</code> in the current working directory before running the above commands.</p>
+</div><ol start="2" class="part" data-startline="172" data-endline="183">
+<li class="" data-startline="172" data-endline="173">
+<p>[15 pts] List users on the server: weechat command <code>/users</code></p>
+</li>
+<li class="" data-startline="174" data-endline="175">
+<p>[15 pts] List available channels: weechat command <code>/list</code></p>
+</li>
+<li class="" data-startline="176" data-endline="177">
+<p>[15 pts] Join a channel successfully: weechat command <code>/join #chan1</code></p>
+</li>
+<li class="" data-startline="178" data-endline="179">
+<p>[15 pts] Get and set channel topic: weechat command <code>/topic hello, world!</code></p>
+</li>
+<li class="" data-startline="180" data-endline="181">
+<p>[15 pts] Send messages to a channel. Users can simply type messages in a channel.</p>
+</li>
+<li class="" data-startline="182" data-endline="183">
+<p>[10 pts] Correct handle error condition.</p>
+</li>
+</ol><p class="part" data-startline="184" data-endline="184">To simplify the demo process, you may run the following commands iteratively for the two users after they have connected to the server.</p><ul class="part" data-startline="186" data-endline="186">
+<li class="" data-startline="186" data-endline="186">User1</li>
+</ul><pre class="part" data-startline="187" data-endline="194"><code>/join #chal1
+/topic hello, world!
+&lt;wait for user2 to join, and then send some messages&gt;
+/part
+/close
+/quit
+</code></pre><ul class="part" data-startline="196" data-endline="196">
+<li class="" data-startline="196" data-endline="196">User2</li>
+</ul><pre class="part" data-startline="197" data-endline="206"><code>/users
+/list
+/join #chal1
+/topic
+&lt;send some messages&gt;
+/part
+/close
+/quit
+</code></pre><p class="part" data-startline="208" data-endline="208">Here is a sample <a href="https://inp111.zoolab.org/hw01/mircd.pcap" target="_blank" rel="noopener">pcap file</a> for you to inspect the messages exchanged between a server and two clients. A few screenshots are also available here for your reference.</p><ul class="part" data-startline="210" data-endline="218">
+<li class="" data-startline="210" data-endline="212">
+<p>User1 and user2 connect to the server [top: user1; bottom: user2]<br>
+<img src="./INP111 Homework 01 Week #7 (2022-10-27)_files/01-weechat-conencted.png" alt="weechat-connected" class="md-image md-image"></p>
+</li>
+<li class="" data-startline="213" data-endline="215">
+<p>User1 created a channel <code>#chal1</code>, and user2 listed the channel(s) [top: user1; bottom: user2].<br>
+<img src="./INP111 Homework 01 Week #7 (2022-10-27)_files/02-weechat-create-channel-and-list.png" alt="weechat-connected" class="md-image md-image"></p>
+</li>
+<li class="" data-startline="216" data-endline="218">
+<p>User2 joined channel <code>#chal1</code> and sent a message [top: user1; bottom: user2].<br>
+<img src="./INP111 Homework 01 Week #7 (2022-10-27)_files/03-weechat-join-channel-and-send.png" alt="weechat-connected" class="md-image md-image"></p>
+</li>
+</ul><h2 class="part" data-startline="219" data-endline="219" id="Error-test_case"><a class="anchor hidden-xs" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Error-test_case" title="Error-test_case" smoothhashscroll=""><i class="fa fa-link"></i></a>Error test_case</h2><p class="part" data-startline="220" data-endline="220">In this part, we will give some test_case let you to check your error handle.</p><p class="part" data-startline="222" data-endline="222">We use <code>nc</code> command to connect server to test error, you need to use NICK and USER command after  <code>nc</code> , since only after both NICK and USER have been received from a client does a user become registered.</p><pre class="part" data-startline="224" data-endline="231"><code>nc localhost 10004            //connect to your server
+
+NICK Kilac            
+USER Kilac localhost test :kilac
+    &lt;&lt;success connect&gt;&gt;
+JOIN #hehe            //These arguments can set by yourself
+</code></pre><ol class="part" data-startline="233" data-endline="281">
+<li class="" data-startline="233" data-endline="237">(401) ERR_NOSUCHNICK<pre><code>PRIVMSG #cool :hello            // cool doesn't exist 
+:mircd 401 Kilac #cool :No such nick/channel
+</code></pre>
+</li>
+<li class="" data-startline="238" data-endline="242">(403) ERR_NOSUCHCHANNEL<pre><code>PART #cool            // cool doesn't exist 
+:mircd 403 Kilac #cool :No such channel
+</code></pre>
+</li>
+<li class="" data-startline="243" data-endline="247">(411) ERR_NORECIPIENT<pre><code>PRIVMSG
+:mircd 411 Kilac :No recipient given (PRIVMSG)
+</code></pre>
+</li>
+<li class="" data-startline="248" data-endline="252">(412) ERR_NOTEXTTOSEND<pre><code>PRIVMSG #hehe
+:mircd 412 Kilac :No text to send
+</code></pre>
+</li>
+<li class="" data-startline="253" data-endline="257">(421) ERR_UNKNOWNCOMMAND<pre><code>TEST
+:mircd 421 Kilac TEST :Unknown command
+</code></pre>
+</li>
+<li class="" data-startline="258" data-endline="262">(431) ERR_NONICKNAMEGIVEN<pre><code>NICK
+:mircd 431 :No nickname given
+</code></pre>
+</li>
+<li class="" data-startline="263" data-endline="267">(436) ERR_NICKCOLLISION<pre><code>NICK Kilac             // Kilac already used by another one
+:mircd 436 Kilac :Nickname collision KILL
+</code></pre>
+</li>
+<li class="" data-startline="268" data-endline="275">(442) ERR_NOTONCHANNEL<pre><code>TOPIC #hehe
+:mircd 442 Kilac #hehe :You are not on that channel
+
+PART #hehe
+:mircd 442 Kilac #hehe :You are not on that channel
+</code></pre>
+</li>
+<li class="" data-startline="276" data-endline="281">(461) ERR_NEEDMOREPARAMS<pre><code>USER
+:mircd 461 Kilac USER :Not enought parameters
+</code></pre>
+</li>
+</ol><div class="alert alert-danger part" data-startline="282" data-endline="283">
+<p>Next week demo we may use another test_case to test your server !!!</p>
+</div></div>
+        <div class="ui-toc dropup unselectable hidden-print scrollspy-view" style="display: none; right: 243.32px;">
+            <div class="pull-right dropdown">
+                <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel"><div class="toc"><ul class="nav">
+<li class="active"><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#INP111-Homework-01-Week-7-2022-10-27" title="INP111 Homework 01 Week #7 (2022-10-27)" smoothhashscroll="">INP111 Homework 01 Week #7 (2022-10-27)</a></li>
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Minimized-IRC-Server-Daemon" title="Minimized IRC Server (Daemon)" smoothhashscroll="">Minimized IRC Server (Daemon)</a><ul class="nav">
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Brief-Descriptions-of-the-Specification" title="Brief Descriptions of the Specification" smoothhashscroll="">Brief Descriptions of the Specification</a><ul class="nav">
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Commands-received-from-a-Client" title="Commands (received from a Client)" smoothhashscroll="">Commands (received from a Client)</a></li>
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Server-Messages-sent-from-the-Server" title="Server Messages (sent from the Server)" smoothhashscroll="">Server Messages (sent from the Server)</a></li>
+</ul>
+</li>
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#The-IRC-Client" title="The IRC Client" smoothhashscroll="">The IRC Client</a></li>
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Demonstration" title="Demonstration" smoothhashscroll="">Demonstration</a></li>
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Error-test_case" title="Error test_case" smoothhashscroll="">Error test_case</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu" style="">
+    <a class="expand-toggle expand-all" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#">Expand all</a>
+    <a class="expand-toggle collapse-all" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" style="display: none;">Collapse all</a>
+    <a class="back-to-top" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#">Back to top</a>
+    <a class="go-to-bottom" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#">Go to bottom</a>
+</div></ul>
+            </div>
+        </div>
+        <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print scrollspy-body affix" data-spy="affix" style="top: 51px; left: 976.68px; width: 228.68px;"><div class="toc"><ul class="nav">
+<li class="active"><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#INP111-Homework-01-Week-7-2022-10-27" title="INP111 Homework 01 Week #7 (2022-10-27)" smoothhashscroll="">INP111 Homework 01 Week #7 (2022-10-27)</a></li>
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Minimized-IRC-Server-Daemon" title="Minimized IRC Server (Daemon)" smoothhashscroll="">Minimized IRC Server (Daemon)</a><ul class="nav">
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Brief-Descriptions-of-the-Specification" title="Brief Descriptions of the Specification" smoothhashscroll="">Brief Descriptions of the Specification</a><ul class="nav">
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Commands-received-from-a-Client" title="Commands (received from a Client)" smoothhashscroll="">Commands (received from a Client)</a></li>
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Server-Messages-sent-from-the-Server" title="Server Messages (sent from the Server)" smoothhashscroll="">Server Messages (sent from the Server)</a></li>
+</ul>
+</li>
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#The-IRC-Client" title="The IRC Client" smoothhashscroll="">The IRC Client</a></li>
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Demonstration" title="Demonstration" smoothhashscroll="">Demonstration</a></li>
+<li><a href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#Error-test_case" title="Error test_case" smoothhashscroll="">Error test_case</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu" style="">
+    <a class="expand-toggle expand-all" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#">Expand all</a>
+    <a class="expand-toggle collapse-all" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" style="display: none;">Collapse all</a>
+    <a class="back-to-top" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#">Back to top</a>
+    <a class="go-to-bottom" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#">Go to bottom</a>
+</div></div>
+    </div>
+</div>
+<!-- toc menu -->
+<div class="toc-menu" style="display: none;">
+    <a class="expand-toggle expand-all" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#">Expand all</a>
+    <a class="expand-toggle collapse-all" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" style="display: none;">Collapse all</a>
+    <a class="back-to-top" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#">Back to top</a>
+    <a class="go-to-bottom" href="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#">Go to bottom</a>
+</div>
+<!-- clipboard modal -->
+<div class="modal fade" id="clipboardModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">從剪貼簿匯入</h4>
+            </div>
+            <div class="modal-body">
+                <div contenteditable="" data-ph="在這裡貼上 Markdown 或是網頁內容…" id="clipboardModalContent" style="overflow:auto;max-height:50vh"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-danger" id="clipboardModalClear">清除</button>
+                <button type="button" class="btn btn-primary" id="clipboardModalConfirm">匯入</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- locked modal -->
+<div class="modal fade locked-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-lock"></i> 此份筆記已被鎖定</h4>
+            </div>
+            <div class="modal-body" style="color:black;">
+                <h5>抱歉，只有擁有者可以編輯此筆記</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">好的</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- limit modal -->
+<div class="modal fade limit-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-exclamation-triangle"></i> 到達上限</h4>
+            </div>
+            <div class="modal-body" style="color:black;">
+                <h5>抱歉，您已使用到此份筆記可用的最大長度</h5>
+                <strong>請減少內容或是將內容切成更多筆記，謝謝！</strong>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal">好的</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- message modal -->
+<div class="modal fade message-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body" style="color:black;">
+                <h5></h5>
+                <a target="_blank" rel="noopener" style="word-break: break-all;"></a>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">好的</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- gist import modal -->
+<div class="modal fade" id="gistImportModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">從 Gist 匯入</h4>
+            </div>
+            <div class="modal-body">
+                <input type="url" class="form-control" placeholder="在此處貼上 gist 網址… (like: https://gist.github.com/username/gistid)" id="gistImportModalContent">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-danger" id="gistImportModalClear">清除</button>
+                <button type="button" class="btn btn-primary" id="gistImportModalConfirm">匯入</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- snippet import modal -->
+<div class="modal fade" id="snippetImportModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">從 Snippet 匯入</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="snippetImportModalAccessToken">
+                <input type="hidden" id="snippetImportModalBaseURL">
+                <input type="hidden" id="snippetImportModalVersion">
+                <div class="ui-field-contain" style="display:table;margin-bottom:10px;width:100%;">
+                    <div style="display:table-row;margin-bottom:5px;">
+                        <label style="display:table-cell;">Project:</label>
+                        <select class="form-control" id="snippetImportModalProjects" style="display:table-cell;" disabled="disabled">
+                            <option value="init" selected="selected" disabled="disabled">從可用專案選擇</option>
+                        </select>
+                    </div>
+                    <div style="display:table-row;">
+                        <label style="display:table-cell;">Snippet</label>
+                        <select class="form-control" id="snippetImportModalSnippets" style="display:table-cell;" disabled="disabled">
+                            <option value="init" selected="selected" disabled="disabled">從可用的 Snippets 選擇</option>
+                        </select>
+                    </div>
+                </div>
+                <p class="snippet-import-or">或是</p>
+                <input type="url" class="form-control" placeholder="/projects/:id/snippets/:snippet_id" id="snippetImportModalContent" disabled="disabled">
+            </div>
+            <div class="modal-footer">
+                <span id="snippetImportModalLoading"><i class="fa fa-refresh fa-spin fa-fw"></i></span>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-danger" id="snippetImportModalClear">清除</button>
+                <button type="button" class="btn btn-primary" id="snippetImportModalConfirm" disabled="disabled">匯入</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- snippet export modal -->
+<div class="modal fade" id="snippetExportModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">匯出至 Snippet</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="snippetExportModalAccessToken">
+                <input type="hidden" id="snippetExportModalBaseURL">
+                <input type="hidden" id="snippetExportModalVersion">
+                <div class="ui-field-contain" style="display:table;margin-bottom:10px;width:100%;">
+                    <div style="display:table-row;margin-bottom:5px;">
+                        <label style="display:table-cell;">Title:</label>
+                        <input class="form-control" placeholder="new snippet" type="text" id="snippetExportModalTitle">
+                    </div>
+                    <div style="display:table-row;margin-bottom:5px;">
+                        <label style="display:table-cell;">File Name:</label>
+                        <input class="form-control" placeholder="new_snippet.md" type="text" id="snippetExportModalFileName">
+                    </div>
+                    <div style="display:table-row;margin-bottom:5px;">
+                        <label style="display:table-cell;">Project:</label>
+                        <select class="form-control" id="snippetExportModalProjects" style="display:table-cell;">
+                            <option value="init" selected="selected" disabled="disabled">從可用專案選擇</option>
+                        </select>
+                    </div>
+                    <div style="display:table-row;margin-bottom:5px;">
+                        <label style="display:table-cell;">Visibility:</label>
+                        <select class="form-control" id="snippetExportModalVisibility" style="display:table-cell;">
+                            <option value="" selected="selected" disabled="disabled">選擇可見層級</option>
+                            <option value="0">Private</option>
+                            <option value="10">Internal</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <span id="snippetExportModalLoading"><i class="fa fa-refresh fa-spin fa-fw"></i></span>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="snippetExportModalConfirm">匯出</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- delete modal -->
+<div class="modal fade delete-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">您確定嗎？</h4>
+            </div>
+            <div class="modal-body">
+                <h5 class="ui-delete-modal-msg">確定刪除這則筆記？</h5>
+                <strong class="ui-delete-modal-item">所有使用者將會失去連線</strong>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-danger ui-delete-modal-confirm">沒錯，就這麼做！</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- refresh modal -->
+<div class="modal fade" id="refreshModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">此頁面需要重新整理</h4>
+            </div>
+            <div class="modal-body">
+                <div class="incompatible-version">
+                    <h5>您使用的是不相容的客戶端</h5>
+                    <strong>請重新整理來更新</strong>
+                </div>
+                <div class="new-version" style="display:none;">
+                    <h5>新版本來了！</h5>
+                    <a href="https://md.zoolab.org/s/release-notes" target="_blank" rel="noopener">請由此查閱更新記錄</a>
+                    <br>
+                    <strong>請重新整理來享受最新功能</strong>
+                </div>
+                <div class="user-state-changed" style="display:none;">
+                    <h5>您的使用者狀態已變更</h5>
+                    <strong>請重新整理來載入新的使用者狀態</strong>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="refreshModalRefresh">重新整理</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- signin modal -->
+<div class="modal fade signin-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="mySmallModalLabel">選擇方式</h4>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <h4>透過 E-Mail 登入</h4>
+                <form data-toggle="validator" role="form" class="form-horizontal" method="post" enctype="application/x-www-form-urlencoded" novalidate="true">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="email" class="form-control" name="email" placeholder="E-Mail" required="">
+                            <span class="help-block control-label with-errors" style="display: inline;"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="password" class="form-control" name="password" placeholder="Password" required="">
+                            <span class="help-block control-label with-errors" style="display: inline;"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <button type="submit" class="btn btn-primary disabled" formaction="/login">登入</button>
+                            
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- help modal -->
+<div class="modal fade help-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="mySmallModalLabel"><i class="fa fa-question-circle"></i> 協助</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">聯絡方式</h3>
+                            </div>
+                            <div class="panel-body">
+                                <a href="https://github.com/hackmdio/codimd/issues" target="_blank"><i class="fa fa-tag fa-fw"></i> 回報問題</a>
+                                <br>
+                                <a href="https://gitter.im/hackmdio/hackmd" target="_blank"><i class="fa fa-hashtag fa-fw"></i> 透過 Gitter 聯絡我們</a>
+                                <br>
+                                <a href="https://poeditor.com/join/project/q0nuPWyztp" target="_blank"><i class="fa fa-language fa-fw"></i> 來 POEditor 幫我們翻譯</a>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">文件</h3>
+                            </div>
+                            <div class="panel-body">
+                                <a href="https://md.zoolab.org/features" title="Features" target="_blank"><i class="fa fa-dot-circle-o fa-fw"></i> 功能簡介</a>
+                                <br>
+                                <a href="https://md.zoolab.org/yaml-metadata" title="YAML Metadata" target="_blank"><i class="fa fa-dot-circle-o fa-fw"></i> YAML 中繼資料</a>
+                                <br>
+                                <a href="https://md.zoolab.org/slide-example" title="Slide Example" target="_blank"><i class="fa fa-dot-circle-o fa-fw"></i> 簡報範例</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">快速簡表</h3>
+                            </div>
+                            <div class="panel-body" style="height: calc(100vh - 215px); overflow: auto;">
+                                <table class="table table-condensed table-cheatsheet">
+                                    <thead>
+                                        <tr>
+                                            <th>範例</th>
+                                            <th>語法</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="markdown-body" style="font-family: inherit; font-size: 14px; padding: 0; max-width: inherit;">
+                                        <tr>
+                                            <td>標題</td>
+                                            <td># 標題</td>
+                                        </tr>
+                                        <tr>
+                                            <td><ul><li>無序清單</li></ul></td>
+                                            <td>- 無序清單</td>
+                                        </tr>
+                                        <tr>
+                                            <td><ol><li>有序清單</li></ol></td>
+                                            <td>1. 有序清單</td>
+                                        </tr>
+                                        <tr>
+                                            <td><ul><li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""><label></label>待辦事項</li></ul></td>
+                                            <td>- [ ] 待辦事項</td>
+                                        </tr>
+                                        <tr>
+                                            <td><blockquote> 引用</blockquote></td>
+                                            <td>&gt; 引用</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>粗體</strong></td>
+                                            <td>**粗體**</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i>斜體</i></td>
+                                            <td>*斜體*</td>
+                                        </tr>
+                                        <tr>
+                                            <td><s>刪除線</s></td>
+                                            <td>~~刪除線~~</td>
+                                        </tr>
+                                        <tr>
+                                            <td>19<sup>th</sup></td>
+                                            <td>19^th^</td>
+                                        </tr>
+                                        <tr>
+                                            <td>H<sub>2</sub>O</td>
+                                            <td>H~2~O</td>
+                                        </tr>
+                                        <tr>
+                                            <td><ins>插入文字</ins></td>
+                                            <td>++插入文字++</td>
+                                        </tr>
+                                        <tr>
+                                            <td><mark>標記文字</mark></td>
+                                            <td>==標記文字==</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a>連結</a></td>
+                                            <td>[link text](https:// "title")</td>
+                                        </tr>
+                                        <tr>
+                                            <td>圖片</td>
+                                            <td>![image alt](https:// "title")</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>程式碼</code></td>
+                                            <td>`程式碼`</td>
+                                        </tr>
+                                        <tr>
+                                            <td><pre style="border:none !important;"><code class="javascript hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span></div><div class="code"><span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>;
+</div></div></code></pre></td>
+                                            <td>```javascript<br>var i = 0;<br>```</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img align="absmiddle" alt=":smile:" class="emoji" src="./INP111 Homework 01 Week #7 (2022-10-27)_files/smile.png" title=":smile:"></td>
+                                            <td>:smile:</td>
+                                        </tr>
+                                        <tr>
+                                            <td>外部</td>
+                                            <td>{%youtube youtube_id %}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>L<sup>a</sup>T<sub>e</sub>X</td>
+                                            <td>$L^aT_eX$</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="alert alert-info"><p>這是警告區塊</p></div></td>
+                                            <td>:::info<br>這是警告區塊<br>:::</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    table.table-cheatsheet tr > td:nth-child(2) {
+        font-family: "Source Code Pro", Consolas, monaco, monospace;
+        letter-spacing: 0.025em;
+        line-height: 1.25;
+    }
+</style>
+
+<!-- revision modal -->
+<div class="modal fade" id="revisionModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="mySmallModalLabel"><i class="fa fa-history"></i> 修訂版本</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-4" style="max-height: calc(100vh - 215px); overflow: auto;">
+                        <div class="list-group ui-revision-list"></div>
+                    </div>
+                    <div class="col-lg-8" style="height: calc(100vh - 215px); overflow: hidden;">
+                        <textarea id="revisionViewer" style="display:none;"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="revisionModalDownload">下載</button>
+                <button type="button" class="btn btn-danger" id="revisionModalRevert">還原</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- pandoc export modal -->
+<div class="modal fade pandoc-export-modal" id="pandoc-export-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">使用 pandoc 匯出</h4>
+            </div>
+            <form action="https://md.zoolab.org/R8jsw2g1QLCcJsyJIGvo7Q#" class="form-inline">
+                <div class="modal-body">
+                    <strong>選擇輸出格式</strong>
+                    <select name="output" id="output" class="form-control">
+                        <option value="asciidoc">AsciiDoc</option>
+                        <option value="context">ConTeXt</option>
+                        <option value="epub">EPUB (.epub)</option>
+                        <option value="epub3">EPUB v3 (.epub3)</option>
+                        <option value="latex">LaTeX</option>
+                        <option value="odt">OpenOffice (.odt)</option>
+                        <option value="rst">reStructuredText (.rst)</option>
+                        <option value="rtf">Rich Text Format (.rtf)</option>
+                        <option value="textile">Textile</option>
+                        <option value="docx">Word (.docx)</option>
+                        <option value="mediawiki">Mediawiki</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" id="pandoc-export-download">匯出</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+    
+    <script src="./INP111 Homework 01 Week #7 (2022-10-27)_files/mathjax-config-extra.js.下載"></script>
+
+<script src="./INP111 Homework 01 Week #7 (2022-10-27)_files/MathJax.js.下載" defer=""></script>
+<script src="./INP111 Homework 01 Week #7 (2022-10-27)_files/TeX-AMS-MML_HTMLorMML.js.下載" defer=""></script>
+<script src="./INP111 Homework 01 Week #7 (2022-10-27)_files/Safe.js.下載" defer=""></script>
+<script src="./INP111 Homework 01 Week #7 (2022-10-27)_files/config"></script><script src="./INP111 Homework 01 Week #7 (2022-10-27)_files/common.1349a0316c4d8448fc8a.js.下載" defer="defer"></script><script src="./INP111 Homework 01 Week #7 (2022-10-27)_files/index-pack.52318c0f563e4435eb52.js.下載" defer="defer"></script>
+
+
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

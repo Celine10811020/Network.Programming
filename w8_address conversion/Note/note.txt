@@ -1,0 +1,43 @@
+domain name: IP address
+	www.google.com  142.251.42.228
+	www.cs.nctu.tw  140.113.235.48
+service name: port number
+	www  80
+	https  443
+	ftp  21
+
+DNS: Domain Name System
+
+forward lookup: from name to IP address
+	one to many
+	nslookup (網址) 
+reverse lookup: from IP address to name
+	one to one
+	nslookup (IP address)
+
+FQDN: Full Qualified Domaiin Name
+	an absolute name end with a period: www.google.com.
+
+RR: Resource Records
+	type of record entries in the DNS: A, AAAA, PTR, MS, CNAME, TXT, SOA
+
+dig (網址) (RR)
+dig (IP 反轉).in-adrr.arpa ptr
+
+A
+	hostname to 32-bit IPv4
+AAAA
+	hostname to 128-bit IPv6
+PTR
+	IP address to hostname
+	140.113.1.2 → 2.1.113.140.in-adrr.arpa
+	2404:6800:4008:c07::66 → 2404680040080c070000000000000066 → 6.6.0.0.0.0.0.0.0.0.0.0.0.0.0.0.7.0.c.0.8.0.0.4.0.0.8.6.4.0.4.2.ip6.arpa
+MS
+	mail server
+CNAME
+	別名（幫domain name設別名，非所有網站皆有）
+SOA
+	管理者的資訊
+
+ANSWER SECTION
+	(FQDN) (TTL) IN (RR) (results)
