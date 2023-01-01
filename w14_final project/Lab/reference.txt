@@ -1,0 +1,13 @@
+https://github.com/homomorfism/CustomDNSServer
+
+https://www.binarytides.com/dns-query-code-in-c-with-linux-sockets/
+
+
+gcc DNS0.c -o DNS0
+
+範例
+dig @inp111.zoolab.org -p 10013 example1.org
+dig @127.0.0.1 -p 9000 www.google.com A
+
+錄封包
+sudo tcpdump -i any udp and port 10013 -s 0 -w test.pcap
