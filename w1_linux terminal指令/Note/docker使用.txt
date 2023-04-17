@@ -10,6 +10,7 @@ docker-compose stop
 
 //登入docker（在OOXX的目錄裡）
 ssh -p 22222 celine@localhost
+pw: 10370108
 //離開docker
 exit
 
